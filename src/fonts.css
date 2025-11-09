@@ -1,0 +1,75 @@
+/* Font Families */
+.heading-font {
+  font-family: 'Onest', sans-serif;
+}
+
+.paragraph-font {
+  font-family: 'Varela Round', sans-serif;
+}
+
+/* Custom Animations */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.5s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.6s ease-out backwards;
+}
+
+.animation-delay-500 {
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
+}
+
+.animation-delay-700 {
+  animation-delay: 0.7s;
+  animation-fill-mode: backwards;
+}
