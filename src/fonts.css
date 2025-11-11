@@ -1,14 +1,25 @@
+.dm-serif {
+  font-family: 'DM Serif Text', serif;
+}
+.onest{
+  font-family: 'Onest', serif;
+}
+
+.poppins{
+  font-family: 'Poppins', serif;
+}
+
+.inter-font {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Font Families */
 .dm-serif-text-font {
   font-family: 'DM Serif Text', serif;
 }
 
-/* Font Families */
 .heading-font {
   font-family: 'Onest', sans-serif;
-}
-
-.paragraph-font {
-  font-family: 'Varela Round', sans-serif;
 }
 
 /* Custom Animations */
