@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhatWeDo from './components/WhatWeDo';
+import Testimonials from './components/Testimonials';
 import './fonts.css';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <WhatWeDo />
+      <Testimonials />
     </div>
   );
 }
