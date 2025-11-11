@@ -11,7 +11,7 @@ const CreativeGraphic = () => {
       <div className="absolute bottom-[25%] left-[10%] text-xl md:text-2xl lg:text-3xl text-green-400 opacity-40 transform -rotate-45">+</div>
 
       {/* Single Empty Card */}
-      <div className="absolute top-1/2 left-1/2 w-64 h-48 bg-gray-800/50 backdrop-blur-lg border border-gray-700 rounded-2xl shadow-lg shadow-white/20 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white text-lg">
+      <div className="absolute top-1/2 left-1/2 w-64 h-48 bg-green-500/50 backdrop-blur-lg border border-gray-700 rounded-2xl shadow-lg shadow-white/20 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-white text-lg">
         {/* Empty Card */}
       </div>
 
