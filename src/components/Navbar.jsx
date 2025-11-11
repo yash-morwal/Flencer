@@ -4,7 +4,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-50 backdrop-blur-xl animate-slideDown">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-opacity-50 backdrop-blur-xl animate-slideDown">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 lg:px-16 py-3">
         <div className="flex justify-between items-center bg-black bg-opacity-50 backdrop-blur-md">
           {/* Logo */}
