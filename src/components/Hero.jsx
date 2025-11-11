@@ -8,11 +8,11 @@ const Hero = () => {
         <div className="flex flex-col-reverse md:flex-row items-center">
           {/* Hero Text Content */}
           <div className="md:w-1/2 md:text-left">
-            <h1 className="dm-serif text-3xl sm:text-4xl md:text-4xl lg:text-6xl  leading-[1.1] md:mb-8 animate-slideUp text-[var(--main-text-color)]">
+            <h1 className="dm-serif text-center md:text-left text-4xl sm:text-4xl md:text-4xl lg:text-6xl  leading-[1.1] md:mb-5 animate-slideUp text-[var(--main-text-color)]">
               We help brands by creating the best <span className='font-bold onest'>ADS</span> in the market<span className="text-green-500">.</span>
             </h1>
             <div className="mb-6 animate-fadeIn animation-delay-500">
-              <p className="inter-font text-base sm:text-lg md:text-xl text-[var(--secondary-text-color)] mb-3 leading-relaxed">
+              <p className="inter-font text-base sm:text-lg md:text-lg text-[var(--secondary-text-color)] mb-3 leading-relaxed">
                 We help brands by creating creative<br className="hidden sm:block" />
                 high quality AI ads in very affordable price.
               </p>
