@@ -4,16 +4,16 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1d1d1d]/95 backdrop-blur-lg animate-slideDown">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-50 backdrop-blur-xl animate-slideDown">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 lg:px-16 py-3">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center bg-black bg-opacity-50 backdrop-blur-md">
           {/* Logo */}
           <div className="heading-font text-2xl font-bold text-white cursor-pointer hover:text-blue-500 transition-colors duration-300">
             Flencer.
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-12 items-center">
+          <div className="hidden md:flex gap-12 items-center bg-black bg-opacity-20 backdrop-blur-lg border border-gray-700 border-opacity-50 rounded-full px-6 py-2">
             <a href="#home" className="paragraph-font text-white hover:text-blue-500 transition-colors duration-300 relative group">
               Home
               <span className="absolute bottom-[-5px] left-0 w-0 h-[2px] bg-blue-500 group-hover:w-full transition-all duration-300"></span>
@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`md:hidden flex flex-col gap-6 bg-[#1a1a1a] overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-96 pt-8' : 'max-h-0'}`}>
+        <div className={`md:hidden flex flex-col gap-6 overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-96 pt-8' : 'max-h-0'}`}>
           <a href="#home" className="paragraph-font text-white hover:text-blue-500 hover:pl-4 transition-all duration-300 py-2" onClick={() => setIsMenuOpen(false)}>
             Home
           </a>
