@@ -14,22 +14,22 @@ const Navbar = () => {
           
           {/* Desktop Menu */}
           <div class="hidden md:flex gap-12 items-center bg-[var(--navbar-menu-bg)] backdrop-blur-lg border border-[var(--border-color)] border-opacity-50 rounded-full px-8 py-3">
-            <a href="#home" className="paragraph-font text-[var(--main-text-color)] hover:text-[#87e64b] transition-colors duration-300 relative group">
+            <a href="#home" className="varela-round-font text-[var(--main-text-color)] hover:text-[#87e64b] transition-colors duration-300 relative group">
               Home
               <span className="absolute bottom-[-5px] left-0 w-0 h-[2px] bg-[#87e64b] group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#projects" className="paragraph-font text-[var(--main-text-color)] hover:text-[#87e64b] transition-colors duration-300 relative group">
+            <a href="#projects" className="varela-round-font text-[var(--main-text-color)] hover:text-[#87e64b] transition-colors duration-300 relative group">
               Projects
               <span className="absolute bottom-[-5px] left-0 w-0 h-[2px] bg-[#87e64b] group-hover:w-full transition-all duration-300"></span>
             </a>
-            <a href="#testimonials" className="paragraph-font text-[var(--main-text-color)] hover:text-[#87e64b] transition-colors duration-300 relative group">
+            <a href="#testimonials" className="varela-round-font text-[var(--main-text-color)] hover:text-[#87e64b] transition-colors duration-300 relative group">
               Testimonials
               <span className="absolute bottom-[-5px] left-0 w-0 h-[2px] bg-[#87e64b] group-hover:w-full transition-all duration-300"></span>
             </a>
           </div>
 
           {/* Desktop CTA */}
-          <button className="hidden md:block paragraph-font bg-[var(--button-primary-bg)] text-[var(--main-bg-color)] px-8 py-3 rounded-xl font-semibold hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(229,231,235,0.3)] transition-all duration-300">
+          <button className="hidden md:block varela-round-font w-32 sm:w-40 bg-[var(--button-primary-bg)] text-[var(--main-bg-color)] px-3 md:px-4 py-1 md:py-2 rounded-full font-semibold hover:-translate-y-1 hover:shadow-[0_4px_12px_rgba(229,231,235,0.3)] transition-all duration-300">
             Contact us
           </button>
 
@@ -49,16 +49,16 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div className={`md:hidden flex flex-col gap-6 overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-96 pt-8' : 'max-h-0'}`}>
-          <a href="#home" className="paragraph-font text-[var(--main-text-color)] hover:text-[#87e64b] hover:pl-4 transition-all duration-300 py-2" onClick={() => setIsMenuOpen(false)}>
+          <a href="#home" className="varela-round-font text-[var(--main-text-color)] hover:text-[#87e64b] hover:pl-4 transition-all duration-300 py-2" onClick={() => setIsMenuOpen(false)}>
             Home
           </a>
-          <a href="#projects" className="paragraph-font text-[var(--main-text-color)] hover:text-[#87e64b] hover:pl-4 transition-all duration-300 py-2" onClick={() => setIsMenuOpen(false)}>
+          <a href="#projects" className="varela-round-font text-[var(--main-text-color)] hover:text-[#87e64b] hover:pl-4 transition-all duration-300 py-2" onClick={() => setIsMenuOpen(false)}>
             Projects
           </a>
-          <a href="#testimonials" className="paragraph-font text-[var(--main-text-color)] hover:text-[#87e64b] hover:pl-4 transition-all duration-300 py-2" onClick={() => setIsMenuOpen(false)}>
+          <a href="#testimonials" className="varela-round-font text-[var(--main-text-color)] hover:text-[#87e64b] hover:pl-4 transition-all duration-300 py-2" onClick={() => setIsMenuOpen(false)}>
             Testimonials
           </a>
-          <button className="paragraph-font bg-[var(--button-primary-bg)] text-[var(--main-bg-color)] px-8 py-3 rounded-xl font-semibold mt-4" onClick={() => setIsMenuOpen(false)}>
+          <button className="varela-round-font w-32 sm:w-40 bg-[var(--button-primary-bg)] text-[var(--main-bg-color)] px-3 md:px-4 py-1 md:py-2 rounded-full font-semibold mt-4" onClick={() => setIsMenuOpen(false)}>
             Contact us
           </button>
         </div>

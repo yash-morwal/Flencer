@@ -17,10 +17,10 @@ const Hero = () => {
                 high quality AI ads in very affordable price.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center md:justify-start items-center">
-                <button className="paragraph-font w-full sm:w-auto bg-[var(--button-primary-bg)] text-[var(--main-bg-color)] px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(229,231,235,0.5)] transition-all duration-300">
+                <button className="varela-round-font w-32 sm:w-40 bg-[var(--button-primary-bg)] text-[var(--main-bg-color)] px-3 md:px-4 py-1 md:py-2 rounded-full font-semibold hover:-translate-y-1 hover:shadow-[0_8px_20px_rgba(229,231,235,0.5)] transition-all duration-300">
                   See Our work
                 </button>
-                <button className="paragraph-font w-full sm:w-auto bg-[var(--button-secondary-bg)] text-[var(--main-text-color)] px-4 md:px-6 py-2 md:py-3 rounded-full font-semibold hover:-translate-y-1 hover:bg-[#363636] hover:shadow-[0_8px_20px_rgba(54,54,54,0.5)] transition-all duration-300 border border-[var(--border-color)]">
+                <button className="varela-round-font w-32 sm:w-40 bg-[var(--button-secondary-bg)] text-[var(--main-text-color)] px-3 md:px-4 py-1 md:py-2 rounded-full font-semibold hover:-translate-y-1 hover:bg-[#363636] hover:shadow-[0_8px_20px_rgba(54,54,54,0.5)] transition-all duration-300 border border-[var(--border-color)]">
                   Give a call
                 </button>
               </div>
