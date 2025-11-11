@@ -8,9 +8,8 @@ const Hero = () => {
         <div className="flex flex-col-reverse md:flex-row items-center">
           {/* Hero Text Content */}
           <div className="md:w-1/2 md:text-left">
-            <h1 className="heading-font text-3xl sm:text-4xl md:text-4xl md:font-bold lg:text-6xl lg:font-[600] leading-[1.1] md:mb-8 animate-slideUp text-[var(--main-text-color)]">
-              We help brands by creating the best <span className='font-black'>ADS</span> in the market<span className="text-green-500">.</span>
-            </h1>
+                         <h1 className="heading-font text-3xl sm:text-4xl md:text-4xl md:font-bold lg:text-6xl lg:font-[600] leading-[1.1] md:mb-8 animate-slideUp text-[var(--main-text-color)]">
+                           We help brands by creating the best <span className='font-black'>ADS</span> in the market<span className="text-green-500">.</span>            </h1>
             <div className="mb-6 animate-fadeIn animation-delay-500">
               <p className="paragraph-font text-base sm:text-lg md:text-xl text-[var(--secondary-text-color)] mb-3 leading-relaxed">
                 We help brands by creating creative<br className="hidden sm:block" />
