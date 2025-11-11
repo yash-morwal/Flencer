@@ -13,7 +13,7 @@ const Navbar = () => {
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-12 items-center bg-[var(--navbar-menu-bg)] backdrop-blur-lg border border-[var(--border-color)] border-opacity-80 rounded-full px-6 py-2">
+          <div class="hidden md:flex gap-12 items-center bg-[var(--navbar-menu-bg)] backdrop-blur-lg border border-[var(--border-color)] border-opacity-50 rounded-full px-8 py-3">
             <a href="#home" className="paragraph-font text-[var(--main-text-color)] hover:text-[#87e64b] transition-colors duration-300 relative group">
               Home
               <span className="absolute bottom-[-5px] left-0 w-0 h-[2px] bg-[#87e64b] group-hover:w-full transition-all duration-300"></span>
