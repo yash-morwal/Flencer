@@ -1,5 +1,16 @@
 @import "tailwindcss";
 
+:root {
+  --main-bg-color: #1d1d1d;
+  --main-text-color: #ffffff;
+  --secondary-text-color: #d1d5db;
+  --button-primary-bg: #e5e7eb;
+  --button-secondary-bg: #2a2a2a;
+  --border-color: #374151;
+  --navbar-bg: rgba(0, 0, 0, 0.5);
+  --navbar-menu-bg: rgba(0, 0, 0, 0.2);
+}
+
 body{
-  background-color: #1D1D1D;
+  background-color: var(--main-bg-color);
 }

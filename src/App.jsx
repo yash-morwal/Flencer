@@ -5,7 +5,7 @@ import './fonts.css';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0f0f0f]">
+    <div className="min-h-screen bg-[var(--main-bg-color)]">
       <Navbar />
       <Hero />
     </div>
