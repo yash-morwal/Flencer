@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --main-bg-color: #1d1d1d;
+  --main-bg-color: #141414;
   --main-text-color: #ffffff;
   --secondary-text-color: #d1d5db;
   --button-primary-bg: #e5e7eb;
