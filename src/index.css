@@ -1,16 +1,52 @@
 @import "tailwindcss";
 
+*{
+  outline: none;
+}
+
 :root {
   --main-bg-color: #141414;
   --main-text-color: #ffffff;
   --secondary-text-color: #d1d5db;
   --button-primary-bg: #e5e7eb;
-  --button-secondary-bg: #2a2a2a;
+  --button-secodary-bg: #2a2a2a;
   --border-color: #2f2f2f;
   --navbar-bg: rgba(0, 0, 0, 0.5);
   --navbar-menu-bg: rgba(0, 0, 0, 0.2);
+
+  /* Page Margins */
+  --page-margin-sm: 1rem;
+  /* px-4 */
+  --page-margin-md: 1.5rem;
+  /* sm:px-6 */
+  --page-margin-lg: 4rem;
+  /* lg:px-16 */
 }
 
-body{
+#hero {
+  background: #000000;
+  background: linear-gradient(170deg, var(--main-bg-color) 0%, rgb(24, 42, 18) 50%, rgb(12, 20, 8) 80%);
+}
+
+body {
   background-color: var(--main-bg-color);
+  
+}
+
+.projects{
+  background: #0d0d0d;
+  background: linear-gradient(45deg, #000000 0%, rgb(24, 42, 18) 50%, rgb(12, 20, 8) 80%);
+}
+.noise {
+  position: relative;
+}
+
+.noise::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.2;   /* control noise strength */
+  mix-blend-mode: overlay;
 }

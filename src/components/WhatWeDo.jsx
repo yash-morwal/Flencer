@@ -33,7 +33,7 @@ const WhatWeDo = () => {
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-16 projects">
       <div className="max-w-[1400px] mx-auto px-4 md:px-8 lg:px-16">
         <h2 className="dm-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center text-[var(--main-text-color)] mb-12">
           What We Do<span className='text-green-500'>.</span>
