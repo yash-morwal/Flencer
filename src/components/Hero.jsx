@@ -1,5 +1,4 @@
 import React from "react";
-import { ArrowUpRight, Play } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -20,16 +19,14 @@ const Hero = () => {
 
           <p className="text-sm sm:text-base text-white/70 max-w-lg">
             We help brands by creating creative, high quality AI
-            ads at a very affordable price.
+            ads at a very affordable price<span className="text-[var(--accent-color)]">.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
             <button className="inline-flex items-center justify-center gap-2 rounded-md bg-[#87e64b] px-5 py-2.5 text-xs font-medium text-black hover:bg-[#9af963] transition-colors shadow-sm w-full sm:w-auto">
               <span>View our work</span>
-              <ArrowUpRight className="h-4 w-4" />
             </button>
             <button className="inline-flex items-center justify-center gap-1.5 rounded-md border border-white/20 bg-transparent px-4 py-2 text-xs font-medium text-white hover:border-white hover:bg-white/5 transition-colors w-full sm:w-auto">
-              <Play className="h-3.5 w-3.5" />
               <span>See ad reel</span>
             </button>
           </div>
@@ -48,7 +45,7 @@ const Hero = () => {
         </div>
 
         {/* Right: simple stat / preview */}
-        <div className="relative w-full max-w-150 rounded-2xl border border-white/10 bg-[#181818] p-4 sm:p-5 shadow-[0_18px_60px_rgba(0,0,0,0.7)]">
+        <div className="relative w-full max-w-150 rounded-2xl border border-white/10 bg-[#0a0a0a] p-4 sm:p-5 shadow-[0_18px_60px_rgba(0,0,0,0.7)]">
           <div className="flex items-center justify-between mb-4">
             <p className="text-xs text-white/70">Recent campaign snapshot</p>
             <span
