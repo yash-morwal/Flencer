@@ -13,7 +13,7 @@ const Navbar = () => {
           </div>
           
           {/* Desktop Menu */}
-          <div class="hidden md:flex gap-12 items-center">
+          <div className="hidden md:flex gap-12 items-center">
             <a href="#home" className="inter-font text-neutral-300 uppercase hover:text-[#87e64b] transition-colors duration-300 relative group">
               Home
               <span className="absolute bottom-[-5px] left-0 w-0 h-[2px] bg-[#87e64b] group-hover:w-full transition-all duration-300"></span>
