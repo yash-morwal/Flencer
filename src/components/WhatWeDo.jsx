@@ -11,16 +11,23 @@ const WhatWeDo = () => {
         <div className="justify-center gap-8 w-full flex flex-row">
           <VideoCard
             videoUrl="xxfr5g20cu"
-            title="Chills - The Ultimate Refreshment"
-            description="Experience the refreshing taste of Chills, the perfect drink to cool you down on a hot day. Made with natural ingredients and a hint of mint, Chills is the ultimate refreshment."
-            type="vertical"
+            title="Chills - Hypothetical Spec Ad"
+            description="A high quality spec"
+            // width="vertical-width"
+            // height="vertical-height"
+            a={`${(9/16)}`}
+            b={`${1}`}
             // aspectRatio="0.562"
           />
           <VideoCard
             videoUrl="c2k2n1m1d9"
             title="Chills - The Ultimate Refreshment"
             description="Experience the refreshing taste of Chills, the perfect drink to cool you down on a hot day. Made with natural ingredients and a hint of mint, Chills is the ultimate refreshment."
-            type="horizontal"
+            // width="horizontal-width"
+            // height="horizontal-height"
+            b={`${(16/9)}`}
+            a={`${(1)}`}
+
             // aspectRatio="1.777"
           />
         </div>

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-*{
+* {
   outline: none;
 }
 
@@ -29,44 +29,60 @@
   background: linear-gradient(170deg, var(--main-bg-color) 0%, rgb(24, 42, 18) 70%, rgb(12, 20, 8) 100%);
 }
 
-body{
+body {
   background-color: var(--main-bg-color);
 }
 
-.projects{
+.projects {
   background: #0d0d0d;
   background: linear-gradient(45deg, #000000 0%, rgb(24, 42, 18) 50%, rgb(12, 20, 8) 80%);
 }
 
-.testimonials{
- background: #0d0d0d;
+.testimonials {
+  background: #0d0d0d;
   background: linear-gradient(45deg, #000000 0%, rgb(24, 42, 18) 50%, rgb(12, 20, 8) 80%);
 }
 
 /* Wistia Styles */
-wistia-player[media-id='xxfr5g20cu']:not(:defined) {
+/* wistia-player[media-id='xxfr5g20cu']:not(:defined) {
   background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/xxfr5g20cu/swatch');
   display: block;
   filter: blur(5px);
-  padding-top:177.78%;
+  padding-top: 177.78%;
 }
 
 wistia-player[media-id='c2k2n1m1d9']:not(:defined) {
   background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/c2k2n1m1d9/swatch');
   display: block;
   filter: blur(5px);
-  padding-top:52.11%;
+  padding-top: 52.11%;
+} */
+
+/*ratio is 5:17*/
+/* .vertical-width {
+  width: 180px;
 }
 
+.vertical-height{
+  height: 320px;
+  object-fit: cover;
+}
 
-.vertical{
-  height: 400px;
-  aspect-ratio: 9/18;
+.horizontal-width {
+  width: 510px;
+  object-fit: cover;
 }
-.horizontal{
-  height: 400px;
-  aspect-ratio: 15/9;
+
+.horizontal-height{
+  height: 444px;
+} */
+.video-player {
+  height: 100%;
+  width: 100%;
+
 }
-.video-card{
-  height: fit-content;
+
+.ytp-button {
+  visibility: hidden !important;
+  display: none !important;
 }
