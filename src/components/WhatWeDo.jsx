@@ -9,27 +9,21 @@ const WhatWeDo = () => {
           What We Do<span className='text-green-500'>.</span>
         </h2>
         <div className="justify-center gap-8 w-full flex flex-row">
+          
           <VideoCard
-            videoUrl="xxfr5g20cu"
-            title="Chills - Hypothetical Spec Ad"
-            description="A high quality spec"
-            // width="vertical-width"
-            // height="vertical-height"
-            a={`${(9/16)}`}
-            b={`${1}`}
-            // aspectRatio="0.562"
+            videoUrl="https://player.cloudinary.com/embed/?cloud_name=doc1619rx&public_id=final_output_wtrmrk_rtgwqk&profile=new"
+            title="Beverage Ad"
+            description="A beverage product Ad for a hypothetical brand named Chills"
+            aspectRatio='0.5625'
           />
           <VideoCard
-            videoUrl="c2k2n1m1d9"
-            title="Chills - The Ultimate Refreshment"
-            description="Experience the refreshing taste of Chills, the perfect drink to cool you down on a hot day. Made with natural ingredients and a hint of mint, Chills is the ultimate refreshment."
-            // width="horizontal-width"
-            // height="horizontal-height"
-            b={`${(16/9)}`}
-            a={`${(1)}`}
+            videoUrl="https://res.cloudinary.com/doc1619rx/video/upload/v1763643528/final_y4kgaq.mp4"
+            title="Jewelery Ad "
+            description="Made a product Ad for a jewelery brand took some jewelry images from Tanishq, and made video using it."
+            aspectRatio='1.77777777777778'
+          />
 
-            // aspectRatio="1.777"
-          />
+
         </div>
       </div>
     </section>
