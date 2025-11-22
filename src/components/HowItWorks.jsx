@@ -35,7 +35,7 @@ const HowItWorks = () => (
         transition={{ duration: 0.6 }}
         className="text-center mb-14"
       >
-        <h2 className="dm-serif text-3xl sm:text-4xl lg:text-5xl text-white font-bold mb-4 tracking-tight">
+        <h2 className="dm-serif text-3xl sm:text-4xl lg:text-5xl text-white mb-4 ">
           How it works?
         </h2>
         <p className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto font-normal leading-relaxed">

@@ -77,7 +77,7 @@ const FaqPage = () => {
                 aria-expanded={hovered === idx}
                 aria-controls={`faq-answer-${idx}`}
               >
-                <span className="flex-1 font-[400] text-md">{faq.q}</span>
+                <span className="flex-1 font-[400] text-sm md:text-base">{faq.q}</span>
                 <svg
                   className={`transition-transform duration-300 ml-3 w-5 h-5 text-[#9af963] ${hovered === idx ? "rotate-180" : ""}`}
                   fill="none"
