@@ -8,20 +8,20 @@ const VideoCard = ({ videoUrl, title, description, aspectRatio, width, a, b }) =
 
   return (
     <div className={`video-card p-4 `}>
-      <div className={`mb-4 flex items-center relative`}>
+      <div className={`mb-2 flex items-center relative`}>
         <div className=''>
           <iframe
               src={videoUrl}
               
-              style={{ height: height, width: 'auto', aspectRatio: aspectRatio }}
+              style={{ height: height, width: 'auto', aspectRatio: aspectRatio, borderRadius:'8px'}}
               allow="autoPlay; fullScreen; encrypted-media; picture-in-picture; hide-control"
               allowfullscreen
               frameborder="0"
             ></iframe>
         </div>
       </div>
-      <h3 className={`font-bold text-white text-lg mb-1 inter-font`} style={{width:`${aspectRatio*height}px`}}>{title}</h3>
-      <p className={`text-gray-300 text-sm inter-font`} style={{width:`${aspectRatio*height}px`}}>{description}</p>
+      <h3 className={`font-bold text-[#ffffff] text-sm mb-1 inter-font`} style={{width:`${aspectRatio*height}px`}}>{title}</h3>
+      <p className={`text-[#999999] text-sm inter-font`} style={{width:`${aspectRatio*height}px`}}>{description}</p>
     </div>
   );
 };

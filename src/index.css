@@ -26,7 +26,7 @@
 }
 
 #hero {
-  background: #202020;
+  background: var(--main-bg-color);
   /* background: linear-gradient(170deg, var(--main-bg-color) 0%, rgb(24, 42, 18) 70%, rgb(12, 20, 8) 100%); */
 }
 
@@ -35,12 +35,12 @@ body {
 }
 
 .projects {
-  background: #202020;
+  background: var(--main-bg-color);
   /* background: linear-gradient(170deg, var(--main-bg-color) 0%, rgb(24, 42, 18) 70%, rgb(12, 20, 8) 100%); */
 }
 
 .testimonials {
-  background: #202020;
+  background: var(--main-bg-color);
   /* background: linear-gradient(170deg, var(--main-bg-color) 0%, rgb(24, 42, 18) 70%, rgb(12, 20, 8) 100%); */
 }
 
@@ -96,4 +96,138 @@ wistia-player[media-id='c2k2n1m1d9']:not(:defined) {
   color: var(--color-text-quaternary);
 }
 
+/* ========== TESTIMONIALS SECTION ========== */
+
+.testimonials {
+  background: var(--main-bg-color);
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: var(--main-bg-color);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimonial-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(84, 84, 84, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 1.25rem;
+  }
+}
+
+/* ========== GALLERY HORIZONTAL GRID ========== */
+
+.gallery-section {
+  background: #202020;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: flex-start;
+  /* Enables smooth wrapping like Pinterest */
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-color: #9af963 #13131d;
+  scrollbar-width: thin;
+}
+
+/* Custom scrollbar (optional, for professionalism) */
+.gallery-grid::-webkit-scrollbar {
+  height: 8px;
+  background: #13131d;
+}
+.gallery-grid::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #87e64b 0%, #9af963 100%);
+  border-radius: 4px;
+}
+
+/* Each gallery card */
+.gallery-card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 24px 0 rgb(0 0 0 / 12%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: border 0.25s, box-shadow 0.25s, transform 0.22s cubic-bezier(.22,1,.36,1);
+  position: relative;
+}
+
+.gallery-card:hover {
+  border-color: #9af963;
+  box-shadow: 0 10px 32px 0 rgba(154, 249, 99, 0.12);
+  transform: translateY(-6px) scale(1.035);
+}
+
+/* Image container */
+.gallery-image-wrap {
+  flex: 1 1 auto;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+/* Image itself */
+.gallery-image {
+  border-radius: 1rem;
+  transition: transform 0.6s cubic-bezier(.17,.67,.83,.67);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.gallery-card:hover .gallery-image {
+  transform: scale(1.08) rotate(-0.7deg);
+}
+
+/* Caption at the bottom */
+.gallery-caption {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  background: rgba(0,0,0,0.6);
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  color: #e5e5e5;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.81rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  pointer-events: none;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 22%);
+}
+
+/* Responsive: stack vertically on very narrow mobile */
+@media (max-width: 540px) {
+  .gallery-grid {
+    flex-direction: column;
+    gap: 1.25rem;
+    overflow-x: visible;
+  }
+  .gallery-card {
+    width: 100% !important;
+    min-width: 190px;
+    max-width: 100vw;
+  }
+  .gallery-caption {
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+}
 
