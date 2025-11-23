@@ -21,7 +21,6 @@ function App() {
       <HowItWorks/>
       <Benefits/>
       <PricingSection/>
-      <CTASection/>
       <Testimonials />
       <FaqPage/>
       <ContactSection/>

@@ -65,7 +65,7 @@ const benefits = [
 ];
 
 const Benefits = () => (
-  <section className="bg-[#141414] py-16 lg:py-24">
+  <section className="py-16 lg:py-24">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -89,7 +89,7 @@ const Benefits = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
-            className="bg-white/5 border border-white/10 rounded-2xl p-3 sm:p-6 lg:p-7 hover:bg-white/[0.07] hover:border-[#9af963]/30 hover:-translate-y-1 transition-all duration-300 group flex flex-col sm:flex-col items-center justify-center min-h-[92px] sm:min-h-[150px]"
+            className="bg-white/4 border border-white/10 rounded-2xl p-3 sm:p-6 lg:p-7 hover:bg-white/[0.07] hover:border-[#9af963]/30 hover:-translate-y-1 transition-all duration-300 group flex flex-col sm:flex-col items-center justify-center min-h-[92px] sm:min-h-[150px]"
             style={{ minHeight: '92px' }} // forces card min height so no overlap/crowding
           >
             <div className="w-full flex items-center sm:block">
