@@ -85,23 +85,40 @@ const groupTestimonials = (items, groupSize) => {
   return groups;
 };
 
-const slideVariants = {
+// Responsive slide variants, disables animation for mobile
+const slideVariants = (withAnimation) => withAnimation ? {
   initial: { x: 60, opacity: 0 },
   animate: { x: 0, opacity: 1 },
   exit: { x: -60, opacity: 0 }
+} : {
+  initial: { opacity: 0 },
+  animate: { opacity: 1 },
+  exit: { opacity: 0 }
 };
 
 const Testimonials = () => {
-  // responsive group size: 2 for mobile/tablet, 3 for desktop
+  // responsive group size: 1 for mobile, 2 for tablet, 3 for desktop
   const [groupSize, setGroupSize] = React.useState(3);
+  const [withAnimation, setWithAnimation] = React.useState(true);
+
   React.useEffect(() => {
     const handleResize = () => {
-      setGroupSize(window.innerWidth < 1024 ? 2 : 3);
+      if (window.innerWidth < 768) {
+        setGroupSize(1);
+        setWithAnimation(false);
+      } else if (window.innerWidth < 1024) {
+        setGroupSize(2);
+        setWithAnimation(true);
+      } else {
+        setGroupSize(3);
+        setWithAnimation(true);
+      }
     };
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   const testimonialGroups = groupTestimonials(testimonials, groupSize);
   const [current, setCurrent] = useCarousel(testimonials.length, groupSize, 5000);
 
@@ -123,21 +140,21 @@ const Testimonials = () => {
         </div>
         {/* Carousel */}
         <div className="relative flex flex-col items-center justify-center min-h-[350px]">
-          <div className="relative w-full flex justify-center">
+          <div className="relative w-full flex justify-center overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.div
                 key={current}
-                variants={slideVariants}
+                variants={slideVariants(withAnimation)}
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                transition={{ duration: 0.7, ease: [0.4, 0.59, 0.48, 1] }}
-                className="flex gap-5 sm:gap-8 justify-center w-full"
+                transition={{ duration: withAnimation ? 0.7 : 0.3, ease: [0.4, 0.59, 0.48, 1] }}
+                className={`flex gap-5 sm:gap-8 justify-center w-full ${groupSize === 1 ? 'flex-col items-center' : ''}`}
               >
                 {testimonialGroups[current].map(testimonial => (
                   <div
                     key={testimonial.id}
-                    className="bg-[#232323] rounded-xl border border-white/15 shadow-lg px-5 py-7 sm:px-7 sm:py-10 max-w-[90vw] w-[320px] sm:w-[340px] md:w-[370px] mx-auto flex flex-col justify-between"
+                    className="bg-[#232323] rounded-xl border border-white/15 shadow-lg px-5 py-7 sm:px-7 sm:py-10 max-w-[98vw] w-full sm:w-[340px] md:w-[370px] mx-auto flex flex-col justify-between"
                   >
                     {/* Stars */}
                     <div className="flex items-center gap-1 mb-2.5">
@@ -148,10 +165,10 @@ const Testimonials = () => {
                       ))}
                     </div>
                     {/* Text */}
-                    <p className="text-base text-white/80 leading-relaxed mb-4 inter-font line-clamp-6">
+                    <p className="text-base text-white/80 leading-relaxed mb-4 line-clamp-6">
                       "{testimonial.text}"
                     </p>
-                    {/* Author + metric */}
+                    {/* Author */}
                     <div className="flex items-center justify-between pt-4 border-t border-white/10">
                       <div className="flex items-center gap-2.5">
                         <img src={testimonial.image} alt={testimonial.name} className="w-9 h-9 rounded-full border-2 border-[#262626]" />
@@ -185,7 +202,6 @@ const Testimonials = () => {
           <p className="text-sm text-white/60 mb-4">
             Join 500+ brands creating better ads with AI
           </p>
-          
         </div>
       </div>
     </section>
