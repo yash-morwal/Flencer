@@ -98,7 +98,7 @@ const Benefits = () => (
                 {benefit.icon}
               </div>
               {/* Title */}
-              <span className="text-md sm:text-xl font-[300] leading-[1.3] sm:leading-auto md:font-medium text-white group-hover:text-[#9af963] transition-colors flex-1 text-left sm:text-center">
+              <span className="text-md sm:text-xl font-[400] leading-[1.3] text-white/90 sm:leading-auto md:font-medium sm:text-white group-hover:text-[#9af963] transition-colors flex-1 text-left sm:text-center">
                 {benefit.title}
               </span>
             </div>

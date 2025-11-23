@@ -18,8 +18,8 @@ function App() {
       <Navbar />
       <Hero />
       <WhatWeDo />
-      <Benefits/>
       <HowItWorks/>
+      <Benefits/>
       <PricingSection/>
       <CTASection/>
       <Testimonials />

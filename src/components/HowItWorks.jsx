@@ -14,14 +14,14 @@ const steps = [
     number: "02",
     title: "AI Magic Happens",
     description: "Our expert team uses premium AI models like Kling, Veo, and ElevenLabs through a sophisticated workflow.",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=550&auto=format&fit=crop&q=80",
+    image: "./images/workflow.png",
   },
   {
     id: 3,
     number: "03",
     title: "Professional Delivery",
     description: "Receive your high-quality, professional ad within 48 hours—ready to launch and drive results.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=550&auto=format&fit=crop&q=80",
+    image: "./images/shoe-ad.png",
   }
 ];
 
@@ -75,7 +75,7 @@ const HowItWorks = () => (
               flex flex-col overflow-hidden
               min-h-[500px]
             ">
-              <div className="w-full h-[380px] overflow-hidden">
+              <div className="w-full h-[400px] sm:h-[480px] overflow-hidden">
                 <img
                   src={step.image}
                   alt={step.title}
