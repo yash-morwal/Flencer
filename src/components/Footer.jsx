@@ -5,19 +5,19 @@ const Footer = () => (
     <div className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-center gap-10 mx-auto py-6">
       {/* Left: Brand & tagline */}
       <div className="flex flex-col items-center md:items-start">
-        <span className="inter-font text-2xl text-white tracking-tight">
+        <span className="inter-font text-2xl text-[var(--main-text-color)] tracking-tight">
           flencer.tech
         </span>
-        <span className="text-sm text-white/60 mt-1">
+        <span className="text-sm text-[var(--secondary-text-color)] mt-1">
           Cinematic ads. Without the cinematic cost.
         </span>
       </div>
       {/* Center: Navigation */}
-      <div className="flex gap-7 text-base text-white/80 font-medium">
-        <a href="#work" className="hover:text-[#9af963] transition">Work</a>
-        <a href="#services" className="hover:text-[#9af963] transition">Services</a>
-        <a href="#process" className="hover:text-[#9af963] transition">Process</a>
-        <a href="#pricing" className="hover:text-[#9af963] transition">Pricing</a>
+      <div className="flex gap-7 text-base text-[var(--main-text-color)]/80 font-medium">
+        <a href="#work" className="hover:text-[var(--accent-color)] transition">Work</a>
+        <a href="#services" className="hover:text-[var(--accent-color)] transition">Services</a>
+        <a href="#process" className="hover:text-[var(--accent-color)] transition">Process</a>
+        <a href="#pricing" className="hover:text-[var(--accent-color)] transition">Pricing</a>
       </div>
       {/* Right: Social Links with colorful icons */}
       <div className="flex gap-6 items-center">

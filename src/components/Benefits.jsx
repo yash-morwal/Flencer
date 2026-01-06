@@ -74,10 +74,10 @@ const Benefits = () => (
         transition={{ duration: 0.6 }}
         className="text-center mb-14"
       >
-        <h2 className="dm-serif text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
+        <h2 className="dm-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--main-text-color)] mb-4">
           Why brands choose Flencer
         </h2>
-        <p className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg text-[var(--secondary-text-color)] max-w-2xl mx-auto">
           Everything you need to create professional ads without the traditional hassle and costs
         </p>
       </motion.div>
@@ -89,21 +89,21 @@ const Benefits = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.08 }}
-            className="bg-white/4 border border-white/10 rounded-2xl p-3 sm:p-6 lg:p-7 hover:bg-white/[0.07] hover:border-[#9af963]/30 hover:-translate-y-1 transition-all duration-300 group flex flex-col sm:flex-col items-center justify-center min-h-[92px] sm:min-h-[150px]"
-            style={{ minHeight: '92px' }} // forces card min height so no overlap/crowding
+            className="bg-white/4 border border-white/10 rounded-2xl p-3 sm:p-6 lg:p-7 hover:bg-white/[0.07] hover:border-[var(--accent-color)]/30 hover:-translate-y-1 transition-all duration-300 group flex flex-col sm:flex-col items-center justify-center min-h-[92px] sm:min-h-[150px]"
+            style={{ minHeight: '92px' }}
           >
             <div className="w-full flex items-center sm:block">
               {/* Icon (always left) */}
-              <div className="w-11 h-11 flex-shrink-0 rounded-xl bg-[#9af963]/10 border border-[#9af963]/20 flex items-center justify-center text-[#9af963] group-hover:bg-[#9af963]/20 group-hover:scale-110 transition-all duration-200 mr-3 sm:mr-0 sm:mb-5">
+              <div className="w-11 h-11 flex-shrink-0 rounded-xl bg-[var(--accent-color)]/10 border border-[var(--accent-color)]/20 flex items-center justify-center text-[var(--accent-color)] group-hover:bg-[var(--accent-color)]/20 group-hover:scale-110 transition-all duration-200 mr-3 sm:mr-0 sm:mb-5">
                 {benefit.icon}
               </div>
               {/* Title */}
-              <span className="text-md sm:text-xl font-[400] leading-[1.3] text-white/90 sm:leading-auto md:font-medium sm:text-white group-hover:text-[#9af963] transition-colors flex-1 text-left sm:text-center">
+              <span className="text-md sm:text-xl font-[400] leading-[1.3] text-[var(--main-text-color)]/90 sm:leading-auto md:font-medium sm:text-[var(--main-text-color)] group-hover:text-[var(--accent-color)] transition-colors flex-1 text-left sm:text-center">
                 {benefit.title}
               </span>
             </div>
             {/* Description -- only visible above sm, with good margin */}
-            <p className="hidden sm:block text-sm text-white/60 inter-font mt-1 sm:mt-2 text-left">
+            <p className="hidden sm:block text-sm text-[var(--secondary-text-color)] inter-font mt-1 sm:mt-2 text-left">
               {benefit.description}
             </p>
           </motion.div>

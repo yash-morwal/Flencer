@@ -5,15 +5,15 @@
 }
 
 :root {
-  --main-bg-color: #1a1a1a;
+  --main-bg-color: #232323;
   --main-text-color: #ffffff;
-  --secondary-text-color: #d1d5db;
+  --secondary-text-color: #e7e7e7;
   --button-primary-bg: #e5e7eb;
   --button-secodary-bg: #2a2a2a;
   --border-color: #2f2f2f;
   --navbar-bg: rgba(0, 0, 0, 0.5);
   --navbar-menu-bg: rgba(0, 0, 0, 0.2);
-  --accent-color: #9af963;
+  --accent-color: #efd935;
   --color-text-quaternary: rgba(255, 255, 255, 0.40);
 
   /* Page Margins */
@@ -44,39 +44,6 @@ body {
   /* background: linear-gradient(170deg, var(--main-bg-color) 0%, rgb(24, 42, 18) 70%, rgb(12, 20, 8) 100%); */
 }
 
-/* Wistia Styles */
-/* wistia-player[media-id='xxfr5g20cu']:not(:defined) {
-  background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/xxfr5g20cu/swatch');
-  display: block;
-  filter: blur(5px);
-  padding-top: 177.78%;
-}
-
-wistia-player[media-id='c2k2n1m1d9']:not(:defined) {
-  background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/c2k2n1m1d9/swatch');
-  display: block;
-  filter: blur(5px);
-  padding-top: 52.11%;
-} */
-
-/*ratio is 5:17*/
-/* .vertical-width {
-  width: 180px;
-}
-
-.vertical-height{
-  height: 320px;
-  object-fit: cover;
-}
-
-.horizontal-width {
-  width: 510px;
-  object-fit: cover;
-}
-
-.horizontal-height{
-  height: 444px;
-} */
 .video-player {
   height: 100%;
   width: 100%;

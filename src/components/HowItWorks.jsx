@@ -35,10 +35,10 @@ const HowItWorks = () => (
         transition={{ duration: 0.6 }}
         className="text-center mb-14"
       >
-        <h2 className="dm-serif text-3xl sm:text-4xl lg:text-5xl text-white mb-4 ">
+        <h2 className="dm-serif text-3xl sm:text-4xl lg:text-5xl text-[var(--main-text-color)] mb-4 ">
           How it works?
         </h2>
-        <p className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto font-normal leading-relaxed">
+        <p className="text-base sm:text-lg text-[var(--secondary-text-color)] max-w-2xl mx-auto font-normal leading-relaxed">
           From your idea to professional ad in just 3 simple steps
         </p>
       </motion.div>
@@ -56,7 +56,7 @@ const HowItWorks = () => (
             {/* Floating number: overlap, subtle shadow, generous size */}
             <div className="absolute -top-7 -left-7 z-20">
               <div
-                className="w-14 h-14 rounded-2xl bg-[#9af963] flex items-center justify-center font-extrabold text-black text-xl dm-serif shadow-xl"
+                className="w-14 h-14 rounded-2xl bg-[var(--accent-color)] flex items-center justify-center font-extrabold text-black text-xl dm-serif shadow-xl"
                 style={{
                   boxShadow: "0 4px 32px 0 rgba(154,249,99,0.16)",
                   letterSpacing: "0.01em",
@@ -89,14 +89,14 @@ const HowItWorks = () => (
               <div className="flex-1 flex flex-col px-6 pb-8 pt-5">
                 <h3 className="text-xl 
                 font-semibold 
-                text-white 
+                text-[var(--main-text-color)] 
                 mb-2
                 inter-font
-                group-hover:text-[#9af963]
+                group-hover:text-[var(--accent-color)]
                 transition-colors">
                   {step.title}
                 </h3>
-                <p className="text-sm text-white/60 leading-relaxed inter-font">
+                <p className="text-sm text-[var(--secondary-text-color)] leading-relaxed inter-font">
                   {step.description}
                 </p>
               </div>

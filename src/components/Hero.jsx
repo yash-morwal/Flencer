@@ -3,36 +3,36 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section id="hero" className=" bg-[var(--main-bg-color)] pt-10 sm:pt-0">
-      <div className="min-h-[100vh] mx-auto px-3 sm:px-6 md:px-14 lg:px-16 py-14 sm:py-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section id="hero" className=" bg-[var(--main-bg-color)] pt-4 sm:pt-0">
+      <div className="min-h-[100vh] mx-auto px-3 sm:px-6 md:px-14 lg:px-16 py-14 sm:py-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-16 items-center">
         {/* Left: main copy */}
         <div className="space-y-6 max-w-150">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] font-medium text-white/70">
+          <div className="inline-flex items-center gap-2 mb-4 sm:mb-8 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] font-medium text-white/70">
             <span
-              className="inline-flex h-1.5 w-1.5 rounded-full bg-[#87e64b]"
+              className="inline-flex h-1.5 w-1.5 rounded-full bg-[var(--accent-color)]"
             ></span>
             <span>AI-powered ad studio for modern brands</span>
           </div>
 
-          <h1 className="dm-serif text-3xl sm:text-4xl lg:text-[60px] tracking-tight text-white">
+          <h1 className="dm-serif text-3xl mb-2 sm:mb-8 sm:text-4xl lg:text-[60px] tracking-tight text-[var(--main-text-color)]">
             We help brands by creating the best ADS in the market.
           </h1>
 
-          <p className="text-sm sm:text-base text-white/70 max-w-lg">
+          <p className="text-sm sm:text-base text-[var(--secondary-text-color)] max-w-lg">
             We help brands by creating creative, high quality AI
             ads at a very affordable price<span className="text-[var(--accent-color)]">.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <button className="inline-flex items-center justify-center gap-2 rounded-md bg-[#87e64b] px-5 py-2.5 text-xs font-medium text-black hover:bg-[#9af963] transition-colors shadow-sm w-full sm:w-auto">
+            <button className="inline-flex items-center justify-center gap-2 rounded-md bg-[var(--accent-color)] px-5 py-2.5 text-xs font-medium text-black hover:opacity-90 transition-opacity shadow-sm w-full sm:w-auto">
               <span>View our work</span>
             </button>
-            <button className="inline-flex items-center justify-center gap-1.5 rounded-md border border-white/20 bg-transparent px-4 py-2 text-xs font-medium text-white hover:border-white hover:bg-white/5 transition-colors w-full sm:w-auto">
+            <button className="inline-flex items-center justify-center gap-1.5 rounded-md border border-white/20 bg-transparent px-4 py-2 text-xs font-medium text-[var(--main-text-color)] hover:border-white hover:bg-white/5 transition-colors w-full sm:w-auto">
               <span>See ad reel</span>
             </button>
           </div>
 
-          <div className="flex flex-wrap gap-3 text-[11px] text-white/60">
+          <div className="flex hidden sm:block flex-wrap gap-2 text-[11px] text-white/60">
             <span className="px-2.5 py-1 rounded-full border border-white/15 bg-white/5">
               AI-first ad production
             </span>
@@ -45,59 +45,203 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right: simple stat / preview */}
+        {/* Right: Improved Dynamic Collage */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="relative"
+          className="relative w-full h-[500px] sm:h-[550px] lg:h-[600px]"
         >
-          <div className="relative">
-            <div className="absolute inset-0 bg-[#9af963]/10 blur-[100px] rounded-full" />
-            
-            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-7 shadow-2xl">
-              <div className="space-y-5">
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-[#0a0a0a]/50 rounded-xl p-4 border border-white/5">
-                    <p className="caption mb-1.5">Time Saved</p>
-                    <p className="heading-h2 text-[2rem] font-bold text-[#9af963]">85%</p>
-                  </div>
-                  <div className="bg-[#0a0a0a]/50 rounded-xl p-4 border border-white/5">
-                    <p className="caption mb-1.5">Cost Reduced</p>
-                    <p className="heading-h2 text-[2rem] font-bold text-[#9af963]">90%</p>
-                  </div>
-                </div>
-
-                <div className="space-y-2.5">
-                  {[
-                    { icon: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z', label: 'Script Generation' },
-                    { icon: 'M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z', label: 'AI Video Creation' },
-                    { icon: 'M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z', label: 'Voice Synthesis' },
-                    { icon: 'M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12', label: 'Export & Deliver' }
-                  ].map((step, i) => (
-                    <motion.div
-                      key={step.label}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.8 + i * 0.1 }}
-                      className="flex items-center gap-3 bg-[#0a0a0a]/50 rounded-lg p-3 border border-white/5"
-                    >
-                      <div className="w-7 h-7 rounded-lg bg-[#9af963]/15 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-4 h-4 text-[#9af963]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={step.icon} />
-                        </svg>
-                      </div>
-                      <span className="body-sm text-white/80 font-medium">{step.label}</span>
-                      <div className="ml-auto">
-                        <svg className="w-4 h-4 text-[#9af963]" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
+          {/* Background glow effects */}
+          <div className="absolute top-10 left-10 w-40 h-40 bg-blue-400/20 blur-[80px] rounded-full -z-20" />
+          <div className="absolute bottom-20 right-10 w-48 h-48 bg-purple-400/20 blur-[100px] rounded-full -z-20" />
+          
+          {/* Column 1 - Left side (narrow column) */}
+          {/* Image 1 - Top left small */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="absolute top-0 left-0 w-[28%] h-[22%]"
+          >
+            <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
+              <img src="/images/col1.png" alt="Creator 1" className="w-full h-full object-cover" />
             </div>
+          </motion.div>
+
+          {/* Image 2 - Middle left tall */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="absolute top-[24%] left-0 w-[28%] h-[40%]"
+          >
+            <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
+              <img src="/images/col6.png" alt="Creator 2" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
+
+          {/* Image 3 - Bottom left medium */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="absolute bottom-0 left-0 w-[28%] h-[34%]"
+          >
+            <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
+              <img src="/images/col2.png" alt="Creator 3" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
+
+          {/* Column 2 - Middle column */}
+          {/* Image 4 - Top center wide */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.45 }}
+            className="absolute top-0 left-[30%] w-[40%] h-[30%]"
+          >
+            <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
+              <img src="/images/col4.png" alt="Creator 4" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
+
+          {/* Image 5 - Middle center small */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.55 }}
+            className="absolute top-[32%] left-[30%] w-[40%] h-[25%]"
+          >
+            <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
+              <img src="/images/col5.png" alt="Creator 5" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
+
+          {/* Image 6 - Bottom center tall */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="absolute bottom-0 left-[30%] w-[40%] h-[41%]"
+          >
+            <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
+              <img src="/images/col3.png" alt="Creator 6" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
+
+          {/* Column 3 - Right side */}
+          {/* Image 7 - Top right tall */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="absolute top-0 right-0 w-[28%] h-[45%]"
+          >
+            <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
+              <img src="/images/col7.jpeg" alt="Creator 7" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
+
+          {/* Image 8 - Middle right small */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.65 }}
+            className="absolute top-[47%] right-0 w-[28%] h-[20%]"
+          >
+            <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
+              <img src="/images/col8.jpeg" alt="Creator 8" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
+
+          {/* Image 9 - Bottom right medium */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.7 }}
+            className="absolute bottom-0 right-0 w-[28%] h-[31%]"
+          >
+            <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
+              <img src="/images/col9.jpeg" alt="Creator 9" className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
+
+          {/* Decorative Elements - All with -z-10 to stay behind */}
+          {/* Floating star - top left */}
+          <motion.div
+            animate={{ rotate: [0, 360], scale: [1, 1.15, 1] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+            className="absolute top-[8%] left-[5%] w-8 h-8 sm:w-10 sm:h-10 -z-10"
+          >
+            <svg viewBox="0 0 100 100" className="w-full h-full opacity-35">
+              <path d="M50 0 L54 46 L100 50 L54 54 L50 100 L46 54 L0 50 L46 46 Z" fill="var(--accent-color)"/>
+            </svg>
+          </motion.div>
+
+          {/* Concentric circles - center overlap */}
+          <div className="absolute top-[35%] left-[35%] w-20 h-20 -z-10">
+            <svg viewBox="0 0 100 100" className="w-full h-full">
+              <circle cx="50" cy="50" r="40" fill="none" stroke="#c084fc" strokeWidth="2" strokeDasharray="4,6" opacity="0.3"/>
+              <circle cx="50" cy="50" r="28" fill="none" stroke="#c084fc" strokeWidth="2" strokeDasharray="3,5" opacity="0.25"/>
+            </svg>
+          </div>
+
+          {/* Dots cluster - top center */}
+          <motion.div
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-[5%] left-[45%] flex gap-1.5 -z-10"
+          >
+            <span className="w-2 h-2 rounded-full bg-blue-400 opacity-50"></span>
+            <span className="w-2 h-2 rounded-full bg-purple-400 opacity-50"></span>
+            <span className="w-2 h-2 rounded-full bg-pink-400 opacity-50"></span>
+          </motion.div>
+
+          {/* Wavy line - left side */}
+          <div className="absolute top-[68%] left-[2%] w-20 h-10 -z-10 opacity-40">
+            <svg viewBox="0 0 100 50" className="w-full h-full">
+              <path d="M5 25 Q 25 10, 50 25 T 95 25" fill="none" stroke="#22d3ee" strokeWidth="2.5" strokeLinecap="round"/>
+            </svg>
+          </div>
+
+          {/* Plus sign - center */}
+          <div className="absolute top-[60%] left-[38%] text-yellow-400 opacity-35 text-xl font-bold -z-10">
+            +
+          </div>
+
+          {/* Star outline - bottom center */}
+          <div className="absolute bottom-[48%] left-[68%] w-8 h-8 -z-10">
+            <svg viewBox="0 0 100 100" className="w-full h-full opacity-40">
+              <path d="M50 10 L55 45 L90 50 L55 55 L50 90 L45 55 L10 50 L45 45 Z" 
+                    fill="none" stroke="#fbbf24" strokeWidth="2.5" />
+            </svg>
+          </div>
+
+          {/* Curved arrow - right side */}
+          <motion.div
+            animate={{ x: [0, 5, 0] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-[70%] right-[5%] w-12 h-12 -z-10 opacity-45"
+          >
+            <svg viewBox="0 0 100 100" className="w-full h-full">
+              <path d="M25 50 Q 45 30, 65 50 L 60 45 M 65 50 L 60 55" 
+                    fill="none" stroke="#f472b6" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </motion.div>
+
+          {/* Small circle accent - bottom left */}
+          <motion.div
+            animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute bottom-[38%] left-[8%] w-7 h-7 rounded-full bg-gradient-to-br from-cyan-400/30 to-blue-500/30 blur-sm -z-10"
+          />
+
+          {/* Dashed circle - top right */}
+          <div className="absolute top-[18%] right-[8%] w-14 h-14 -z-10">
+            <svg viewBox="0 0 100 100" className="w-full h-full opacity-30">
+              <circle cx="50" cy="50" r="45" fill="none" stroke="var(--accent-color)" strokeWidth="2" strokeDasharray="6,6"/>
+            </svg>
           </div>
         </motion.div>
       </div>

@@ -7,7 +7,7 @@ const faqs = [
     a: `We leverage advanced Generative AI technologies to build hyper-realistic visuals from scratch. By bypassing the need for expensive camera crews, actors, and location rentals, we create production-grade commercials (like the Nike/Adidas examples in our portfolio) entirely digitally. This allows for limitless creativity without logistical limits.`
   },
   {
-    q: "Will AI ads match my brand’s specific look and feel?",
+    q: "Will AI ads match my brand's specific look and feel?",
     a: `Absolutely. We don't just generate random images; we tailor the AI models to your specific brand identity. Whether you need a specific color palette (like a 60/30/10 split), specific fonts, or a certain mood, we ensure every frame aligns perfectly with your existing brand guidelines.`
   },
   {
@@ -47,7 +47,7 @@ const FaqPage = () => {
           initial={{ opacity: 0, y: 22 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-4xl sm:text-5xl text-white text-center dm-serif mb-8"
+          className="text-4xl sm:text-5xl text-[var(--main-text-color)] text-center dm-serif mb-8"
         
         >
           Frequently Asked Questions
@@ -66,9 +66,9 @@ const FaqPage = () => {
               <div
                 className="
                   cursor-pointer w-full text-left px-6 py-5 flex items-center justify-between
-                  text-[1.12rem] text-white/90 font-medium
+                  text-[1.12rem] text-[var(--main-text-color)]/90 font-medium
                   transition-colors
-                  hover:text-[#a1f56b]
+                  hover:text-[var(--accent-color)]
                   select-none
                 "
                 style={{ fontFamily: "Inter, sans-serif", fontWeight: 500 }}
@@ -79,7 +79,7 @@ const FaqPage = () => {
               >
                 <span className="flex-1 font-[400] text-sm md:text-base">{faq.q}</span>
                 <svg
-                  className={`transition-transform duration-300 ml-3 w-5 h-5 text-[#9af963] ${hovered === idx ? "rotate-180" : ""}`}
+                  className={`transition-transform duration-300 ml-3 w-5 h-5 text-[var(--accent-color)] ${hovered === idx ? "rotate-180" : ""}`}
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -99,7 +99,7 @@ const FaqPage = () => {
                     style={{ overflow: 'hidden' }}
                   >
                     <div
-                      className="px-6 pb-6 pt-4 text-white/70 text-[15px] border-t border-white/[0.09] font-[400] leading-relaxed"
+                      className="px-6 pb-6 pt-4 text-[var(--secondary-text-color)] text-[15px] border-t border-white/[0.09] font-[400] leading-relaxed"
                     >
                       {faq.a}
                     </div>

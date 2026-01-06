@@ -6,10 +6,10 @@ const WhatWeDo = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="dm-serif text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
+          <h2 className="dm-serif text-4xl sm:text-5xl lg:text-6xl text-[var(--main-text-color)] mb-6">
             What we do?
           </h2>
-          <p className="text-base sm:text-lg text-white/70 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-[var(--secondary-text-color)] max-w-4xl mx-auto leading-relaxed">
             We make ai ads for brands that look completely professional and photorealistic in a very affordable budget
             that would otherwise take thousands of dollar as ad creation requires sets, lightings, camera man, models, locations.
           </p>
@@ -19,10 +19,10 @@ const WhatWeDo = () => {
         <div className="flex justify-end mb-6">
           <a
             href="#gallery"
-            className="inline-flex inter-font items-center gap-2 text-md font-[300] text-white/70 hover:text-[#9af963] transition-colors group"
+            className="inline-flex inter-font items-center gap-2 text-md font-[300] text-[var(--secondary-text-color)] hover:text-[var(--accent-color)] transition-colors group"
           >
             See more
-            <span className="text-[#9af963] ml-[-8px]">
+            <span className="text-[var(--accent-color)] ml-[-8px]">
               <svg
                 className="w-4 h-4 group-hover:translate-x-1 transition-transform"
                 fill="none"
@@ -40,7 +40,7 @@ const WhatWeDo = () => {
           {/* Row 1: Large Landscape + Portrait + Large Landscape */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[280px]">
             {/* Card 1: Large Landscape (spans 5 cols) */}
-            <div className="md:col-span-5 h-[280px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[#9af963] transition-all">
+            <div className="md:col-span-5 h-[280px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[var(--accent-color)] transition-all">
               <div className="absolute inset-0 w-full h-full">
                 {/* Replace with iframe */}
                 <div className="w-full h-full flex items-center justify-center">
@@ -50,7 +50,7 @@ const WhatWeDo = () => {
             </div>
 
             {/* Card 2: Portrait/Vertical (spans 2 cols) */}
-            <div className="md:col-span-2 h-[280px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[#9af963] transition-all">
+            <div className="md:col-span-2 h-[280px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[var(--accent-color)] transition-all">
               <div className="absolute inset-0 w-full h-full">
                 <div className="w-full h-full flex items-center justify-center">
                   {/* <span className="text-white/30 text-sm">Video 2</span> */}
@@ -59,7 +59,7 @@ const WhatWeDo = () => {
             </div>
 
             {/* Card 3: Large Landscape (spans 5 cols) */}
-            <div className="md:col-span-5 h-[280px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[#9af963] transition-all">
+            <div className="md:col-span-5 h-[280px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[var(--accent-color)] transition-all">
               <div className="absolute inset-0 w-full h-full">
                 <div className="w-full h-full flex items-center justify-center">
                   {/* <span className="text-white/30 text-sm">Video 3</span> */}
@@ -71,7 +71,7 @@ const WhatWeDo = () => {
           {/* Row 2: Three Equal Landscape Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[240px]">
             {/* Card 4: Landscape */}
-            <div className="h-[240px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[#9af963] transition-all">
+            <div className="h-[240px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[var(--accent-color)] transition-all">
               <div className="absolute inset-0 w-full h-full">
                 <div className="w-full h-full flex items-center justify-center">
                   {/* <span className="text-white/30 text-sm">Video 4</span> */}
@@ -80,7 +80,7 @@ const WhatWeDo = () => {
             </div>
 
             {/* Card 5: Landscape */}
-            <div className="h-[240px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[#9af963] transition-all">
+            <div className="h-[240px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[var(--accent-color)] transition-all">
               <div className="absolute inset-0 w-full h-full">
                 <div className="w-full h-full flex items-center justify-center">
                   {/* <span className="text-white/30 text-sm">Video 5</span> */}
@@ -89,7 +89,7 @@ const WhatWeDo = () => {
             </div>
 
             {/* Card 6: Landscape */}
-            <div className="h-[240px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[#9af963] transition-all">
+            <div className="h-[240px] bg-[#3a3a3a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[var(--accent-color)] transition-all">
               <div className="absolute inset-0 w-full h-full">
                 <div className="w-full h-full flex items-center justify-center">
                   {/* <span className="text-white/30 text-sm">Video 6</span> */}
