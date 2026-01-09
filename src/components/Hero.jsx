@@ -65,7 +65,7 @@ const Hero = () => {
             className="absolute top-0 left-0 w-[28%] h-[22%]"
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
-              <img src="/images/col1.jpeg" alt="Creator 1" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/doc1619rx/image/upload/v1767951166/col1_alkei4.jpg" alt="Creator 1" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -77,7 +77,7 @@ const Hero = () => {
             className="absolute top-[24%] left-0 w-[28%] h-[40%]"
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
-              <img src="/images/col6.png" alt="Creator 2" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/doc1619rx/image/upload/v1767951168/col6_esizwt.png" alt="Creator 2" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -89,7 +89,7 @@ const Hero = () => {
             className="absolute bottom-0 left-0 w-[28%] h-[34%]"
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
-              <img src="/images/col2.png" alt="Creator 3" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/doc1619rx/image/upload/v1767951166/col2_ufgomq.png" alt="Creator 3" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -102,7 +102,7 @@ const Hero = () => {
             className="absolute top-0 left-[30%] w-[40%] h-[30%]"
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
-              <img src="/images/col4.png" alt="Creator 4" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/doc1619rx/image/upload/v1767951167/col4_nsixjq.png" alt="Creator 4" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -114,7 +114,7 @@ const Hero = () => {
             className="absolute top-[32%] left-[30%] w-[40%] h-[25%]"
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
-              <img src="/images/col5.png" alt="Creator 5" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/doc1619rx/image/upload/v1767951167/col5_pnzyid.png" alt="Creator 5" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -126,7 +126,7 @@ const Hero = () => {
             className="absolute bottom-0 left-[30%] w-[40%] h-[41%]"
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
-              <img src="/images/col3.png" alt="Creator 6" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/doc1619rx/image/upload/v1767951167/col3_tum3hy.png" alt="Creator 6" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -139,7 +139,7 @@ const Hero = () => {
             className="absolute top-0 right-0 w-[28%] h-[45%]"
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
-              <img src="/images/col7.jpeg" alt="Creator 7" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/doc1619rx/image/upload/v1767951167/col7_e0vjnr.jpg" alt="Creator 7" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -151,7 +151,7 @@ const Hero = () => {
             className="absolute top-[47%] right-0 w-[28%] h-[20%]"
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
-              <img src="/images/col8.jpeg" alt="Creator 8" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/doc1619rx/image/upload/v1767951168/col8_fwwwv0.jpg" alt="Creator 8" className="w-full h-full object-cover" />
             </div>
           </motion.div>
 
@@ -163,7 +163,7 @@ const Hero = () => {
             className="absolute bottom-0 right-0 w-[28%] h-[31%]"
           >
             <div className="relative w-full h-full overflow-hidden rounded-xl border border-white/5 shadow-lg">
-              <img src="/images/col9.jpeg" alt="Creator 9" className="w-full h-full object-cover" />
+              <img src="https://res.cloudinary.com/doc1619rx/image/upload/v1767951166/col9_a9wcqu.jpg" alt="Creator 9" className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </motion.div>
