@@ -298,7 +298,7 @@ const VideoModal = ({ video, onClose }) => {
 
 
             <div className="overflow-y-auto modal-content-scroll flex-1">
-              <div className="p-1 sm:p-5 md:p-6 lg:px-7 lg:py-3">
+              <div className="p-2 sm:p-5 md:p-6 lg:px-7 lg:py-3">
                 <div className={`relative w-full mx-auto bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-xl mb-3 sm:mb-4 md:mb-4 ${
                   video.type === 'vertical' ? 'aspect-[9/16] max-w-sm mx-auto' : 'aspect-video'
                 }`}>
