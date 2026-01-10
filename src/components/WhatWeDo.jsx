@@ -214,7 +214,7 @@ const VideoCard = ({ video, onClick, className = "" }) => {
 
 
       {/* Content Section - Extended area below thumbnail */}
-      <div className="p-4 sm:p-5 bg-[#2d2d2d]">
+      <div className="p-4 sm:p-5 bg-[#2d2d2d] flex-1">
         <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-[var(--main-text-color)] mb-2 group-hover:text-[var(--accent-color)] transition-colors line-clamp-1">
           {video.title}
         </h3>
@@ -299,8 +299,8 @@ const VideoModal = ({ video, onClose }) => {
 
             <div className="overflow-y-auto modal-content-scroll flex-1">
               <div className="p-2 sm:p-5 md:p-6 lg:px-7 lg:py-3">
-                <div className={`relative w-full mx-auto bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-xl mb-3 sm:mb-4 md:mb-4 ${
-                  video.type === 'vertical' ? 'aspect-[9/16] max-w-sm mx-auto' : 'aspect-video'
+                <div className={`relative mx-auto bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-xl mb-3 sm:mb-4 md:mb-4 ${
+                  video.type === 'vertical' ? 'aspect-[9/16] max-h-[530px] mx-auto' : 'aspect-video w-full'
                 }`}>
                   <iframe
                     src={`${video.videoUrl}?autoplay=1&rel=0&modestbranding=1`}
