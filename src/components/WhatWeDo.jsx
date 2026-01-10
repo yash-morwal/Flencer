@@ -2,60 +2,63 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 
+
 const videos = [
   {
     id: 1,
-    title: "Product Showcase Ad",
-    description: "Stunning product visualization with dynamic camera movements and professional lighting effects",
-    thumbnail: "/images/col1.jpeg",
-    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-    type: "landscape"
+    title: "Chills Lemonade ",
+    description: "Vibrant 3D motion design capturing the crisp energy and refreshing spirit of Chills canned lemonade.",
+    thumbnail: "https://res.cloudinary.com/doc1619rx/image/upload/v1767972280/thumb2_pvogd9.png",
+    videoUrl: "https://www.youtube.com/embed/8MmenrsWIT4",
+    type: "vertical"
   },
   {
     id: 2,
-    title: "Instagram Reel",
-    description: "Vertical format perfect for social media platforms with engaging storytelling",
-    thumbnail: "/images/col2.png",
-    videoUrl: "https://www.youtube.com/embed/jNQXAC9IVRw",
-    type: "vertical"
+    title: "Nike Spec Ad | High-Energy Brand Visuals",
+    description: "Inspiring cinematic storytelling that captures the raw speed and relentless drive of Nike performance.",
+    thumbnail: "https://res.cloudinary.com/doc1619rx/image/upload/v1768060593/thmb_xywxmd.jpg",
+    videoUrl: "https://www.youtube.com/embed/JUKGSisMFyM",
+    type: "landscape"
   },
   {
     id: 3,
-    title: "Brand Story Ad",
-    description: "Cinematic storytelling with AI-generated scenes and emotional narrative",
-    thumbnail: "/images/col3.png",
-    videoUrl: "https://www.youtube.com/embed/9bZkp7q19f0",
+    title: "Tanishq | Luxury Jewelry Spec Ad",
+    description: "A sophisticated luxury showcase for Tanishq centered on elegant model photography and brand aesthetic.",
+    thumbnail: "https://res.cloudinary.com/doc1619rx/image/upload/v1768060804/thmb_wkw9oi.png",
+    videoUrl: "https://www.youtube.com/embed/HA_TWpet6rg",
     type: "landscape"
   },
-  {
-    id: 4,
-    title: "E-commerce Ad",
-    description: "Professional product demo in lifestyle setting with seamless transitions",
-    thumbnail: "/images/col4.png",
-    videoUrl: "https://www.youtube.com/embed/kJQP7kiw5Fk",
-    type: "vertical"
-  },
-  {
-    id: 5,
-    title: "TikTok Style Ad",
-    description: "Fast-paced UGC style content designed for maximum engagement",
-    thumbnail: "/images/col5.png",
-    videoUrl: "https://www.youtube.com/embed/YQHsXMglC9A",
-    type: "landscape"
-  },
-  {
-    id: 6,
-    title: "Testimonial Video",
-    description: "Authentic customer stories with AI avatars and compelling narratives",
-    thumbnail: "/images/col6.png",
-    videoUrl: "https://www.youtube.com/embed/OPf0YbXqDm0",
-    type: "landscape"
-  }
+  // {
+  //   id: 4,
+  //   title: "E-commerce Ad",
+  //   description: "Professional product demo in lifestyle setting with seamless transitions",
+  //   thumbnail: "/images/col4.png",
+  //   videoUrl: "https://www.youtube.com/embed/kJQP7kiw5Fk",
+  //   type: "vertical"
+  // },
+  // {
+  //   id: 5,
+  //   title: "TikTok Style Ad",
+  //   description: "Fast-paced UGC style content designed for maximum engagement",
+  //   thumbnail: "/images/col5.png",
+  //   videoUrl: "https://www.youtube.com/embed/YQHsXMglC9A",
+  //   type: "landscape"
+  // },
+  // {
+  //   id: 6,
+  //   title: "Testimonial Video",
+  //   description: "Authentic customer stories with AI avatars and compelling narratives",
+  //   thumbnail: "/images/col6.png",
+  //   videoUrl: "https://www.youtube.com/embed/OPf0YbXqDm0",
+  //   type: "landscape"
+  // }
 ];
+
 
 
 const WhatWeDo = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
+
 
 
   const openVideo = (video) => {
@@ -64,10 +67,12 @@ const WhatWeDo = () => {
   };
 
 
+
   const closeVideo = () => {
     setSelectedVideo(null);
     document.body.style.overflow = 'unset';
   };
+
 
 
   return (
@@ -83,6 +88,7 @@ const WhatWeDo = () => {
             that would otherwise take thousands of dollar as ad creation requires sets, lightings, camera man, models, locations.
           </p>
         </div>
+
 
 
         {/* See More Link */}
@@ -106,45 +112,15 @@ const WhatWeDo = () => {
         </div>
 
 
-        {/* Video Grid */}
-        <div className="space-y-4 sm:space-y-6">
-          {/* Mobile: Stack vertically */}
-          <div className="flex flex-col gap-4 sm:gap-6 md:hidden">
-            {videos.map((video) => (
-              <VideoCard key={video.id} video={video} onClick={() => openVideo(video)} />
-            ))}
-          </div>
 
-
-          {/* Tablet: 2 columns */}
-          <div className="hidden md:grid lg:hidden grid-cols-2 gap-4 sm:gap-6">
-            {videos.map((video) => (
-              <VideoCard key={video.id} video={video} onClick={() => openVideo(video)} />
-            ))}
-          </div>
-
-
-          {/* Desktop: 2 columns - Row 1 */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-6">
-            <VideoCard video={videos[0]} onClick={() => openVideo(videos[0])} />
-            <VideoCard video={videos[1]} onClick={() => openVideo(videos[1])} />
-          </div>
-
-
-          {/* Desktop: 2 columns - Row 2 */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-6">
-            <VideoCard video={videos[2]} onClick={() => openVideo(videos[2])} />
-            <VideoCard video={videos[3]} onClick={() => openVideo(videos[3])} />
-          </div>
-
-
-          {/* Desktop: 2 columns - Row 3 */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-6">
-            <VideoCard video={videos[4]} onClick={() => openVideo(videos[4])} />
-            <VideoCard video={videos[5]} onClick={() => openVideo(videos[5])} />
-          </div>
+        {/* Video Grid - Dynamic for all screen sizes */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
+          {videos.map((video) => (
+            <VideoCard key={video.id} video={video} onClick={() => openVideo(video)} />
+          ))}
         </div>
       </div>
+
 
 
       {/* Video Modal */}
@@ -152,6 +128,7 @@ const WhatWeDo = () => {
     </section>
   );
 };
+
 
 
 // Video Card Component - 16:9 thumbnail with object-contain + blurred background
@@ -192,14 +169,16 @@ const VideoCard = ({ video, onClick, className = "" }) => {
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 z-10" />
 
 
-        {/* Play Icon - Center - 60% opacity */}
+
+        {/* Play Icon - Center - 75% opacity */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--accent-color)] opacity-60 flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl border-2 border-black/20">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--accent-color)] opacity-75 flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl border-2 border-black/20">
             <svg className="w-6 h-6 sm:w-7 sm:h-7 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
         </div>
+
 
 
         {/* Arrow Icon - Top Right Corner */}
@@ -213,18 +192,20 @@ const VideoCard = ({ video, onClick, className = "" }) => {
       </div>
 
 
+
       {/* Content Section - Extended area below thumbnail */}
       <div className="p-4 sm:p-5 bg-[#2d2d2d] flex-1">
-        <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-[var(--main-text-color)] mb-2 group-hover:text-[var(--accent-color)] transition-colors line-clamp-1">
+        <h3 className="text-base sm:text-lg poppins lg:text-lg font-semibold text-[var(--main-text-color)] mb-1 group-hover:text-[var(--accent-color)] transition-colors line-clamp-1">
           {video.title}
         </h3>
-        <p className="text-xs sm:text-sm text-[var(--secondary-text-color)] leading-relaxed line-clamp-2">
+        <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed line-clamp-2">
           {video.description}
         </p>
       </div>
     </div>
   );
 };
+
 
 
 // Video Modal Component
@@ -259,7 +240,9 @@ const VideoModal = ({ video, onClose }) => {
   }, [video]);
 
 
+
   if (!video) return null;
+
 
 
   return (
@@ -297,6 +280,7 @@ const VideoModal = ({ video, onClose }) => {
             </button>
 
 
+
             <div className="overflow-y-auto modal-content-scroll flex-1">
               <div className="p-2 sm:p-5 md:p-6 lg:px-7 lg:py-3">
                 <div className={`relative mx-auto bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-xl mb-3 sm:mb-4 md:mb-4 ${
@@ -313,6 +297,7 @@ const VideoModal = ({ video, onClose }) => {
                 </div>
 
 
+
                 <div className="space-y-2 sm:space-y-2.5 md:space-y-1 pb-2">
                   <h2 className="inter-font text-lg sm:text-xl md:text-2xl lg:text-xl font-bold text-[var(--main-text-color)] leading-tight">
                     {video.title}
@@ -320,6 +305,7 @@ const VideoModal = ({ video, onClose }) => {
                   <p className="inter-font text-xs sm:text-sm md:text-base text-[var(--secondary-text-color)] leading-relaxed">
                     {video.description}
                   </p>
+
 
 
                   <div className="flex items-center justify-between pt-2 sm:pt-3 border-t border-white/10">
@@ -345,6 +331,7 @@ const VideoModal = ({ video, onClose }) => {
     </AnimatePresence>
   );
 };
+
 
 
 export default WhatWeDo;
