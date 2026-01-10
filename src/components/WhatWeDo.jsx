@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 const videos = [
   {
     id: 1,
     title: "Product Showcase Ad",
     description: "Stunning product visualization with dynamic camera movements and professional lighting effects",
-    thumbnail: "/images/thumb1.jpg",
+    thumbnail: "/images/col1.jpeg",
     videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
     type: "landscape"
   },
@@ -14,7 +15,7 @@ const videos = [
     id: 2,
     title: "Instagram Reel",
     description: "Vertical format perfect for social media platforms with engaging storytelling",
-    thumbnail: "/images/thumb2.jpg",
+    thumbnail: "/images/col2.png",
     videoUrl: "https://www.youtube.com/embed/jNQXAC9IVRw",
     type: "vertical"
   },
@@ -22,7 +23,7 @@ const videos = [
     id: 3,
     title: "Brand Story Ad",
     description: "Cinematic storytelling with AI-generated scenes and emotional narrative",
-    thumbnail: "/images/thumb3.jpg",
+    thumbnail: "/images/col3.png",
     videoUrl: "https://www.youtube.com/embed/9bZkp7q19f0",
     type: "landscape"
   },
@@ -30,15 +31,15 @@ const videos = [
     id: 4,
     title: "E-commerce Ad",
     description: "Professional product demo in lifestyle setting with seamless transitions",
-    thumbnail: "/images/thumb4.jpg",
+    thumbnail: "/images/col4.png",
     videoUrl: "https://www.youtube.com/embed/kJQP7kiw5Fk",
-    type: "landscape"
+    type: "vertical"
   },
   {
     id: 5,
     title: "TikTok Style Ad",
     description: "Fast-paced UGC style content designed for maximum engagement",
-    thumbnail: "/images/thumb5.jpg",
+    thumbnail: "/images/col5.png",
     videoUrl: "https://www.youtube.com/embed/YQHsXMglC9A",
     type: "landscape"
   },
@@ -46,24 +47,28 @@ const videos = [
     id: 6,
     title: "Testimonial Video",
     description: "Authentic customer stories with AI avatars and compelling narratives",
-    thumbnail: "/images/thumb6.jpg",
+    thumbnail: "/images/col6.png",
     videoUrl: "https://www.youtube.com/embed/OPf0YbXqDm0",
     type: "landscape"
   }
 ];
 
+
 const WhatWeDo = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
+
 
   const openVideo = (video) => {
     setSelectedVideo(video);
     document.body.style.overflow = 'hidden';
   };
 
+
   const closeVideo = () => {
     setSelectedVideo(null);
     document.body.style.overflow = 'unset';
   };
+
 
   return (
     <section className="py-16 lg:py-20">
@@ -78,6 +83,7 @@ const WhatWeDo = () => {
             that would otherwise take thousands of dollar as ad creation requires sets, lightings, camera man, models, locations.
           </p>
         </div>
+
 
         {/* See More Link */}
         <div className="flex justify-end mb-6">
@@ -99,23 +105,47 @@ const WhatWeDo = () => {
           </a>
         </div>
 
+
         {/* Video Grid */}
-        <div className="space-y-4">
-          {/* Row 1: Large Landscape + Portrait + Large Landscape */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 h-auto md:h-[280px]">
-            <VideoCard video={videos[0]} onClick={() => openVideo(videos[0])} className="md:col-span-5" />
-            <VideoCard video={videos[1]} onClick={() => openVideo(videos[1])} className="md:col-span-2" />
-            <VideoCard video={videos[2]} onClick={() => openVideo(videos[2])} className="md:col-span-5" />
+        <div className="space-y-4 sm:space-y-6">
+          {/* Mobile: Stack vertically */}
+          <div className="flex flex-col gap-4 sm:gap-6 md:hidden">
+            {videos.map((video) => (
+              <VideoCard key={video.id} video={video} onClick={() => openVideo(video)} />
+            ))}
           </div>
 
-          {/* Row 2: Three Equal Landscape Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 h-auto md:h-[240px]">
+
+          {/* Tablet: 2 columns */}
+          <div className="hidden md:grid lg:hidden grid-cols-2 gap-4 sm:gap-6">
+            {videos.map((video) => (
+              <VideoCard key={video.id} video={video} onClick={() => openVideo(video)} />
+            ))}
+          </div>
+
+
+          {/* Desktop: 2 columns - Row 1 */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-6">
+            <VideoCard video={videos[0]} onClick={() => openVideo(videos[0])} />
+            <VideoCard video={videos[1]} onClick={() => openVideo(videos[1])} />
+          </div>
+
+
+          {/* Desktop: 2 columns - Row 2 */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-6">
+            <VideoCard video={videos[2]} onClick={() => openVideo(videos[2])} />
             <VideoCard video={videos[3]} onClick={() => openVideo(videos[3])} />
+          </div>
+
+
+          {/* Desktop: 2 columns - Row 3 */}
+          <div className="hidden lg:grid lg:grid-cols-2 gap-6">
             <VideoCard video={videos[4]} onClick={() => openVideo(videos[4])} />
             <VideoCard video={videos[5]} onClick={() => openVideo(videos[5])} />
           </div>
         </div>
       </div>
+
 
       {/* Video Modal */}
       <VideoModal video={selectedVideo} onClose={closeVideo} />
@@ -123,80 +153,102 @@ const WhatWeDo = () => {
   );
 };
 
-// Video Card Component
+
+// Video Card Component - 16:9 thumbnail with object-contain + blurred background
 const VideoCard = ({ video, onClick, className = "" }) => {
   return (
     <div
       onClick={onClick}
-      className={`${className} h-[280px] md:h-full bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-2xl overflow-hidden relative group hover:ring-2 hover:ring-[var(--accent-color)] transition-all cursor-pointer`}
+      className={`${className} w-full bg-[#222222] rounded-2xl overflow-hidden group hover:ring-2 hover:ring-[var(--accent-color)] transition-all cursor-pointer flex flex-col`}
     >
-      {/* Thumbnail Background */}
-      <div className="absolute inset-0 w-full h-full bg-[#3a3a3a]">
-        <div className="w-full h-full flex items-center justify-center text-[var(--secondary-text-color)] text-6xl opacity-20">
-          ▶
+      {/* Thumbnail Section - 16:9 aspect ratio with blurred background */}
+      <div className="relative w-full aspect-video overflow-hidden bg-[#1a1a1a]">
+        {/* Blurred Background Layer - Always present for ALL videos */}
+        <div className="absolute inset-0">
+          <img 
+            src={video.thumbnail} 
+            alt=""
+            className="w-full h-full object-cover blur-2xl scale-110 opacity-40"
+          />
         </div>
-      </div>
+        
+        {/* Foreground Image - object-contain to show full image */}
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src={video.thumbnail} 
+            alt={video.title}
+            className="w-full h-full object-contain"
+            onError={(e) => {
+              e.target.style.display = 'none';
+              const fallback = document.createElement('div');
+              fallback.className = 'w-full h-full flex items-center justify-center text-white/20 text-6xl';
+              fallback.textContent = '▶';
+              e.target.parentElement.appendChild(fallback);
+            }}
+          />
+        </div>
+        
+        {/* Dark Overlay on Hover */}
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 z-10" />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-      {/* Content */}
-      <div className="absolute inset-0 p-5 flex flex-col justify-between">
-        {/* Play Icon - Top Right */}
-        <div className="flex justify-end">
-          <div className="w-10 h-10 rounded-full bg-[var(--accent-color)]/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-            <svg className="w-5 h-5 text-black ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+        {/* Play Icon - Center - 60% opacity */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+          <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[var(--accent-color)] opacity-60 flex items-center justify-center group-hover:scale-110 transition-transform shadow-2xl border-2 border-black/20">
+            <svg className="w-6 h-6 sm:w-7 sm:h-7 text-black ml-1" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5v14l11-7z" />
             </svg>
           </div>
         </div>
 
-        {/* Title & Description - Bottom */}
-        <div>
-          <h3 className="text-lg sm:text-xl font-semibold text-[var(--main-text-color)] mb-1 group-hover:text-[var(--accent-color)] transition-colors">
-            {video.title}
-          </h3>
-          <p className="text-xs sm:text-sm text-[var(--secondary-text-color)] leading-relaxed line-clamp-2">
-            {video.description}
-          </p>
+
+        {/* Arrow Icon - Top Right Corner */}
+        <div className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity z-20">
+          <div className="w-8 h-8 rounded-full bg-black/40 backdrop-blur-sm flex items-center justify-center border border-white/10">
+            <svg className="w-4 h-4 text-[var(--accent-color)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </div>
         </div>
       </div>
 
-      {/* Arrow Icon - Bottom Right Corner */}
-      <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-        <svg className="w-6 h-6 text-[var(--accent-color)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-        </svg>
+
+      {/* Content Section - Extended area below thumbnail */}
+      <div className="p-4 sm:p-5 bg-[#2d2d2d]">
+        <h3 className="text-base sm:text-lg lg:text-xl font-semibold text-[var(--main-text-color)] mb-2 group-hover:text-[var(--accent-color)] transition-colors line-clamp-1">
+          {video.title}
+        </h3>
+        <p className="text-xs sm:text-sm text-[var(--secondary-text-color)] leading-relaxed line-clamp-2">
+          {video.description}
+        </p>
       </div>
     </div>
   );
 };
 
-// Video Modal Component - Fixed Size with Internal Scrolling
+
+// Video Modal Component
 const VideoModal = ({ video, onClose }) => {
   useEffect(() => {
     if (video) {
-      // Inject custom scrollbar styles for modal content
       const style = document.createElement('style');
       style.innerHTML = `
         .modal-content-scroll::-webkit-scrollbar {
-          width: 6px;
+          width: 4px;
         }
         .modal-content-scroll::-webkit-scrollbar-track {
-          background: rgba(255, 255, 255, 0.05);
-          border-radius: 10px;
-          margin: 8px 0;
+          background: transparent;
         }
         .modal-content-scroll::-webkit-scrollbar-thumb {
-          background: var(--accent-color);
+          background: rgba(154, 249, 99, 0.3);
           border-radius: 10px;
         }
         .modal-content-scroll::-webkit-scrollbar-thumb:hover {
-          background: #7ee145;
+          background: rgba(154, 249, 99, 0.6);
         }
         .modal-content-scroll {
           scrollbar-width: thin;
-          scrollbar-color: var(--accent-color) rgba(255, 255, 255, 0.05);
+          scrollbar-color: rgba(154, 249, 99, 0.3) transparent;
         }
       `;
       document.head.appendChild(style);
@@ -206,7 +258,9 @@ const VideoModal = ({ video, onClose }) => {
     }
   }, [video]);
 
+
   if (!video) return null;
+
 
   return (
     <AnimatePresence>
@@ -224,16 +278,14 @@ const VideoModal = ({ video, onClose }) => {
           }}
           onClick={onClose}
         >
-          {/* Modal Content Container - Fixed Size */}
           <motion.div
             initial={{ scale: 0.95, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.95, opacity: 0, y: 20 }}
             transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
-            className="relative w-full max-w-5xl bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-xl sm:rounded-2xl border border-white/10 shadow-2xl max-h-[90vh] flex flex-col"
+            className="relative w-full max-w-[1000px] bg-gradient-to-br from-[#2a2a2a] to-[#1a1a1a] rounded-xl sm:rounded-2xl border border-white/10 shadow-2xl max-h-[95vh] flex flex-col"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close Button */}
             <button
               onClick={onClose}
               className="absolute top-2 right-2 sm:top-3 sm:right-3 z-20 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center transition-all group"
@@ -244,14 +296,11 @@ const VideoModal = ({ video, onClose }) => {
               </svg>
             </button>
 
-            {/* Scrollable Content Wrapper */}
+
             <div className="overflow-y-auto modal-content-scroll flex-1">
-              <div className="p-1 sm:p-5 md:p-6 lg:p-7">
-                {/* Video Container */}
-                <div className={`relative w-full bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-xl mb-3 sm:mb-4 md:mb-5 ${
-                  video.type === 'vertical' 
-                    ? 'aspect-[9/16] max-w-sm mx-auto' 
-                    : 'aspect-video'
+              <div className="p-1 sm:p-5 md:p-6 lg:px-7 lg:py-3">
+                <div className={`relative w-full mx-auto bg-black rounded-lg sm:rounded-xl overflow-hidden shadow-xl mb-3 sm:mb-4 md:mb-4 ${
+                  video.type === 'vertical' ? 'aspect-[9/16] max-w-sm mx-auto' : 'aspect-video'
                 }`}>
                   <iframe
                     src={`${video.videoUrl}?autoplay=1&rel=0&modestbranding=1`}
@@ -263,16 +312,16 @@ const VideoModal = ({ video, onClose }) => {
                   />
                 </div>
 
-                {/* Title & Description - Below Video */}
-                <div className="space-y-2 sm:space-y-2.5 md:space-y-3 px-3 pb-2">
-                  <h2 className="inter-font text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[var(--main-text-color)] leading-tight">
+
+                <div className="space-y-2 sm:space-y-2.5 md:space-y-1 pb-2">
+                  <h2 className="inter-font text-lg sm:text-xl md:text-2xl lg:text-xl font-bold text-[var(--main-text-color)] leading-tight">
                     {video.title}
                   </h2>
                   <p className="inter-font text-xs sm:text-sm md:text-base text-[var(--secondary-text-color)] leading-relaxed">
                     {video.description}
                   </p>
 
-                  {/* Format Badge & Share - Ensure visibility */}
+
                   <div className="flex items-center justify-between pt-2 sm:pt-3 border-t border-white/10">
                     <span className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[var(--accent-color)]/10 border border-[var(--accent-color)]/20 text-xs sm:text-sm text-[var(--accent-color)] font-medium whitespace-nowrap">
                       <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
@@ -296,5 +345,6 @@ const VideoModal = ({ video, onClose }) => {
     </AnimatePresence>
   );
 };
+
 
 export default WhatWeDo;
