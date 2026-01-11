@@ -28,30 +28,6 @@ const videos = [
     videoUrl: "https://www.youtube.com/embed/HA_TWpet6rg",
     type: "landscape"
   },
-  // {
-  //   id: 4,
-  //   title: "E-commerce Ad",
-  //   description: "Professional product demo in lifestyle setting with seamless transitions",
-  //   thumbnail: "/images/col4.png",
-  //   videoUrl: "https://www.youtube.com/embed/kJQP7kiw5Fk",
-  //   type: "vertical"
-  // },
-  // {
-  //   id: 5,
-  //   title: "TikTok Style Ad",
-  //   description: "Fast-paced UGC style content designed for maximum engagement",
-  //   thumbnail: "/images/col5.png",
-  //   videoUrl: "https://www.youtube.com/embed/YQHsXMglC9A",
-  //   type: "landscape"
-  // },
-  // {
-  //   id: 6,
-  //   title: "Testimonial Video",
-  //   description: "Authentic customer stories with AI avatars and compelling narratives",
-  //   thumbnail: "/images/col6.png",
-  //   videoUrl: "https://www.youtube.com/embed/OPf0YbXqDm0",
-  //   type: "landscape"
-  // }
 ];
 
 
@@ -93,8 +69,19 @@ const WhatWeDo = () => {
 
         {/* See More Link */}
         <div className="flex justify-end mb-6">
-          <a
-            href="#gallery"
+          <button
+            onClick={() => {
+              const element = document.getElementById('testimonials');
+              if (element) {
+                const offset = 80;
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+                window.scrollTo({
+                  top: offsetPosition,
+                  behavior: 'smooth'
+                });
+              }
+            }}
             className="inline-flex inter-font items-center gap-2 text-md font-[300] text-[var(--secondary-text-color)] hover:text-[var(--accent-color)] transition-colors group"
           >
             See more
@@ -108,13 +95,13 @@ const WhatWeDo = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </span>
-          </a>
+          </button>
         </div>
 
 
 
         {/* Video Grid - Dynamic for all screen sizes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
+        <div id="projects" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6">
           {videos.map((video) => (
             <VideoCard key={video.id} video={video} onClick={() => openVideo(video)} />
           ))}

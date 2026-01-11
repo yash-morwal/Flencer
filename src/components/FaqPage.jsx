@@ -41,7 +41,7 @@ const FaqPage = () => {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <section className="min-h-screen py-14 px-4 sm:px-8 md:px-16">
+    <section id="faq" className="min-h-screen py-14 px-4 sm:px-8 md:px-16">
       <div className="max-w-3xl mx-auto ">
         <motion.h1
           initial={{ opacity: 0, y: 22 }}

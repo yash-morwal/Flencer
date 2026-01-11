@@ -65,7 +65,7 @@ const benefits = [
 ];
 
 const Benefits = () => (
-  <section className="py-16 lg:py-24">
+  <section id="benefits" className="py-16 lg:py-24">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
       <motion.div
         initial={{ opacity: 0, y: 30 }}

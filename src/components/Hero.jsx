@@ -2,6 +2,25 @@ import React from "react";
 import { motion } from 'framer-motion';
 
 const Hero = () => {
+  // Scroll to projects section
+  const scrollToProjects = () => {
+    const element = document.getElementById('projects');
+    if (element) {
+      const offset = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Open ad reel video (you can replace with your actual video URL)
+  const openAdReel = () => {
+    window.open('https://www.youtube.com/watch?v=YOUR_AD_REEL_VIDEO_ID', '_blank');
+  };
+
   return (
     <section id="hero" className=" bg-[var(--main-bg-color)] pt-4 sm:pt-0">
       <div className="mx-auto px-3 sm:px-6 md:px-14 lg:px-16 py-14 sm:py-20 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-16 items-center">
@@ -24,12 +43,18 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <button className="inline-flex items-center justify-center gap-2 rounded-md bg-[var(--accent-color)] px-5 py-2.5 text-xs font-medium text-black hover:opacity-90 transition-opacity shadow-sm w-full sm:w-auto">
+            <button 
+              onClick={scrollToProjects}
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-[var(--accent-color)] px-6 py-2.5 text-xs font-medium text-black cursor-pointer hover:opacity-90 transition-opacity shadow-sm w-full sm:w-auto"
+            >
               <span>View our work</span>
             </button>
-            <button className="inline-flex items-center justify-center gap-1.5 rounded-md border border-white/20 bg-transparent px-4 py-2 text-xs font-medium text-[var(--main-text-color)] hover:border-white hover:bg-white/5 transition-colors w-full sm:w-auto">
+            {/* <button 
+              onClick={openAdReel}
+              className="inline-flex items-center justify-center gap-1.5 rounded-md border border-white/20 bg-transparent px-4 py-2 text-xs font-medium cursor-pointer text-[var(--main-text-color)] hover:border-white hover:bg-white/5 transition-colors w-full sm:w-auto"
+            >
               <span>See ad reel</span>
-            </button>
+            </button> */}
           </div>
 
           <div className="flex hidden sm:block flex-wrap gap-2 text-[11px] text-white/60">

@@ -8,27 +8,27 @@ const steps = [
     number: "01",
     title: "Share Your Vision",
     description: "Send us your product images or simply describe your ad idea. That's all we need to get started.",
-    image: "./images/shoe.png",
+    image: "https://res.cloudinary.com/doc1619rx/image/upload/v1768128194/shoe_xateew.png",
   },
   {
     id: 2,
     number: "02",
     title: "AI Magic Happens",
     description: "Our expert team uses premium AI models like Kling, Veo, and ElevenLabs through a sophisticated workflow.",
-    image: "./images/workflow.png",
+    image: "https://res.cloudinary.com/doc1619rx/image/upload/v1768128194/workflow_krdgdk.png",
   },
   {
     id: 3,
     number: "03",
     title: "Professional Delivery",
     description: "Receive your high-quality, professional ad within 48 hours—ready to launch and drive results.",
-    image: "./images/shoe-ad.png",
+    image: "https://res.cloudinary.com/doc1619rx/image/upload/v1768128193/shoe-ad_jccwnc.png",
   }
 ];
 
 
 const HowItWorks = () => (
-  <section className="py-16 lg:py-24">
+  <section id="how-it-works" className="py-16 lg:py-24">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -79,18 +79,34 @@ const HowItWorks = () => (
               flex flex-col overflow-hidden
               h-full
             ">
-              {/* Responsive aspect ratio: 16:9 on mobile, 3:4 on tablet, 16:9 on desktop */}
-              <div className="w-full aspect-video md:aspect-[3/4] lg:aspect-video overflow-hidden">
-                <img
-                  src={step.image}
-                  alt={step.title}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                  style={{
-                    borderTopLeftRadius: '16px',
-                    borderTopRightRadius: '16px'
-                  }}
-                />
+              {/* Image with blurred background + object-contain foreground */}
+              <div className="relative w-full aspect-video md:aspect-[3/4] lg:aspect-[3/4] overflow-hidden bg-[#1a1a1a]">
+                {/* Blurred Background Layer */}
+                <div className="absolute inset-0">
+                  <img 
+                    src={step.image} 
+                    alt=""
+                    className="w-full h-full object-cover blur-2xl scale-110 opacity-40"
+                  />
+                </div>
+                
+                {/* Foreground Image - object-contain to show full image */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <img
+                    src={step.image}
+                    alt={step.title}
+                    className="w-full h-full object-contain md:object-cover transition-transform duration-300 group-hover:scale-105"
+                    onError={(e) => {
+                      e.target.style.display = 'none';
+                      const fallback = document.createElement('div');
+                      fallback.className = 'w-full h-full flex items-center justify-center text-white/20 text-6xl';
+                      fallback.textContent = '📦';
+                      e.target.parentElement.appendChild(fallback);
+                    }}
+                  />
+                </div>
               </div>
+
               {/* Responsive padding: smaller on mobile, larger on tablet+ */}
               <div className="flex-1 flex flex-col px-4 pb-5 pt-3 md:px-6 md:pb-8 md:pt-5">
                 <h3 className="text-lg 

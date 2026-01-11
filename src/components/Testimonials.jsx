@@ -4,63 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Chen",
-    role: "Marketing Director",
-    company: "TechFlow",
+    name: "Viral Morzaria",
+    role: "Instagram influencer",
+    company: "ViralAI Studios",
     image: "https://i.pravatar.cc/150?img=1",
     rating: 5,
-    text: "Flencer transformed our ad production. We went from spending $15k per campaign to just $1.5k, with faster turnaround and better results. The AI quality is genuinely impressive.",
+    text: "I worked with Flencer on a video for my Viral AI Studios page, and the final output was genuinely impressive. They have a good creative eye, take feedback well, and are clearly invested in delivering strong results. I enjoyed collaborating with them and would be happy to work together again.",
     metric: "10x ROI"
-  },
-  {
-    id: 2,
-    name: "Michael Rodriguez",
-    role: "Founder & CEO",
-    company: "GrowthLabs",
-    image: "https://i.pravatar.cc/150?img=2",
-    rating: 5,
-    text: "As a startup, we couldn't afford traditional agencies. Flencer gave us agency-quality ads at a price we could actually afford. Game changer for our growth.",
-    metric: "5 campaigns"
-  },
-  {
-    id: 3,
-    name: "Priya Sharma",
-    role: "Creative Lead",
-    company: "BrandStudio",
-    image: "https://i.pravatar.cc/150?img=3",
-    rating: 5,
-    text: "I was skeptical about AI-generated ads, but Flencer proved me wrong. The creativity, quality, and speed are unmatched. Our clients are consistently impressed.",
-    metric: "92% approval"
-  },
-  {
-    id: 4,
-    name: "James Thompson",
-    role: "E-commerce Manager",
-    company: "RetailPro",
-    image: "https://i.pravatar.cc/150?img=4",
-    rating: 5,
-    text: "We produce 15+ product ads monthly now. Before Flencer, we could barely afford 2-3. The unlimited revisions are a lifesaver for perfecting every detail.",
-    metric: "15 ads/month"
-  },
-  {
-    id: 5,
-    name: "Emma Wilson",
-    role: "Social Media Manager",
-    company: "FashionForward",
-    image: "https://i.pravatar.cc/150?img=5",
-    rating: 5,
-    text: "The turnaround time is incredible. We get high-quality ads in 48 hours that used to take weeks. Our content calendar has never been this consistent.",
-    metric: "48hr delivery"
-  },
-  {
-    id: 6,
-    name: "David Kumar",
-    role: "Growth Marketer",
-    company: "StartupHub",
-    image: "https://i.pravatar.cc/150?img=6",
-    rating: 5,
-    text: "Flencer's AI understands our brand voice perfectly. Every ad feels authentic and converts well. The cost savings let us test more variations and scale faster.",
-    metric: "+245% CTR"
   }
 ];
 
@@ -179,7 +129,7 @@ const Testimonials = () => {
   }
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24">
+    <section id="testimonials" className="py-16 sm:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-8">
         {/* Header */}
         <div className="mb-10 sm:mb-14 text-center">

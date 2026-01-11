@@ -21,7 +21,7 @@ function App() {
       <HowItWorks/>
       <Benefits/>
       <PricingSection/>
-      <Testimonials />
+      {/* <Testimonials /> */}
       <FaqPage/>
       <ContactSection/>
       <Footer/>
