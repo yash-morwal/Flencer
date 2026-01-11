@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+
 const steps = [
   {
     id: 1,
@@ -25,6 +26,7 @@ const steps = [
   }
 ];
 
+
 const HowItWorks = () => (
   <section className="py-16 lg:py-24">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-10 lg:px-16">
@@ -43,7 +45,9 @@ const HowItWorks = () => (
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-8">
+
+      {/* Smaller gap on mobile (gap-4), larger on tablet+ (md:gap-8) */}
+      <div className="grid grid-cols-1 md:grid-cols-3 px-5 md:px-0 gap-4 md:gap-3 lg:gap-8">
         {steps.map((step, idx) => (
           <motion.div
             key={step.id}
@@ -73,9 +77,10 @@ const HowItWorks = () => (
               hover:shadow-2xl
               duration-300
               flex flex-col overflow-hidden
-              min-h-[500px]
+              h-full
             ">
-              <div className="w-full h-[400px] sm:h-[480px] overflow-hidden">
+              {/* Responsive aspect ratio: 16:9 on mobile, 3:4 on tablet, 16:9 on desktop */}
+              <div className="w-full aspect-video md:aspect-[3/4] lg:aspect-video overflow-hidden">
                 <img
                   src={step.image}
                   alt={step.title}
@@ -86,11 +91,12 @@ const HowItWorks = () => (
                   }}
                 />
               </div>
-              <div className="flex-1 flex flex-col px-6 pb-8 pt-5">
-                <h3 className="text-xl 
+              {/* Responsive padding: smaller on mobile, larger on tablet+ */}
+              <div className="flex-1 flex flex-col px-4 pb-5 pt-3 md:px-6 md:pb-8 md:pt-5">
+                <h3 className="text-lg 
                 font-semibold 
                 text-[var(--main-text-color)] 
-                mb-2
+                mb-1.5 md:mb-2
                 inter-font
                 group-hover:text-[var(--accent-color)]
                 transition-colors">
@@ -107,5 +113,6 @@ const HowItWorks = () => (
     </div>
   </section>
 );
+
 
 export default HowItWorks;
