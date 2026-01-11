@@ -8,21 +8,21 @@ const steps = [
     number: "01",
     title: "Share Your Vision",
     description: "Send us your product images or simply describe your ad idea. That's all we need to get started.",
-    image: "https://res.cloudinary.com/doc1619rx/image/upload/v1768128194/shoe_xateew.png",
+    image: "https://res.cloudinary.com/doc1619rx/image/upload/v1768128423/shoe_xateew.png",
   },
   {
     id: 2,
     number: "02",
     title: "AI Magic Happens",
     description: "Our expert team uses premium AI models like Kling, Veo, and ElevenLabs through a sophisticated workflow.",
-    image: "https://res.cloudinary.com/doc1619rx/image/upload/v1768128194/workflow_krdgdk.png",
+    image: "https://res.cloudinary.com/doc1619rx/image/upload/v1768128365/workflow_krdgdk.png",
   },
   {
     id: 3,
     number: "03",
     title: "Professional Delivery",
     description: "Receive your high-quality, professional ad within 48 hours—ready to launch and drive results.",
-    image: "https://res.cloudinary.com/doc1619rx/image/upload/v1768128193/shoe-ad_jccwnc.png",
+    image: "https://res.cloudinary.com/doc1619rx/image/upload/v1768128469/shoe-ad_jccwnc.png",
   }
 ];
 
